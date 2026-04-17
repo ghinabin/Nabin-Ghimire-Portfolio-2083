@@ -1,0 +1,136 @@
+/* =====================================================
+   DESIGN TOKENS — single source of truth
+   Nabin Ghimire Portfolio
+   ===================================================== */
+
+:root {
+  /* ── Brand Identity ──────────────────────────────── */
+  /* Raw brand values — do not use directly in components.
+     Use semantic aliases below so both modes stay coherent. */
+  --brand-chartreuse: #E1FF51;   /* Chartreuse — electric yellow-green  */
+  --brand-gunmetal:   #00272C;   /* Gun Metal  — deep teal-black        */
+
+  /* ── Color: Light Mode ───────────────────────────── */
+  /* Palette derived from Gun Metal's hue (186°, teal).
+     Vivid mid-teal (#006E81) is the accent — mirrors the role
+     Chartreuse plays in dark mode: same hue family, clearly
+     distinct from near-black body text, pops on light bg.
+     Contrast ratios all pass WCAG 2.1 AA.               */
+  --color-bg:             #EAF6F7;   /* hsl(186, 42%, 94%)  — teal-tinted bg  */
+  --color-bg-elevated:    #F0FBFB;   /* hsl(186, 60%, 97%) — teal-lifted      */
+  --color-bg-muted:       #D5ECF0;   /* hsl(186, 42%, 88%)  — recessed areas  */
+  --color-text:           #062229;   /* hsl(192, 73%, 9%)   — near-black teal */
+  --color-text-secondary: #2D5C65;   /* hsl(187, 38%, 29%)  — 5.9:1 on bg    */
+  --color-text-tertiary:  #5E8F9A;   /* hsl(191, 25%, 49%)  — 3.5:1 on bg    */
+  --color-border:         #9EC4CB;   /* hsl(186, 28%, 71%)  — visible edge    */
+  --color-border-subtle:  #C2E0E5;   /* hsl(186, 38%, 83%)  — hairline        */
+  --color-accent:         #006E81;   /* hsl(186, 100%, 25%) — vivid teal, ~5:1 on bg ✓ */
+  --color-accent-hover:   #008599;   /* hsl(186, 100%, 30%) — hover/focus      */
+  --color-accent-muted:   #B8DDE3;   /* hsl(186, 42%, 80%)  — chip bg         */
+
+  /* ── Semantic Aliases (used throughout components) ── */
+  --bg:             var(--color-bg);
+  --bg-elevated:    var(--color-bg-elevated);
+  --bg-muted:       var(--color-bg-muted);
+  --text:           var(--color-text);
+  --text-secondary: var(--color-text-secondary);
+  --text-tertiary:  var(--color-text-tertiary);
+  --border:         var(--color-border);
+  --border-subtle:  var(--color-border-subtle);
+  --accent:         var(--color-accent);
+  --accent-hover:   var(--color-accent-hover);
+  --accent-muted:   var(--color-accent-muted);
+
+  /* ── Typography: Families ── */
+  /* Provided by next/font/google — injected as CSS variables on <html>.
+     Fraunces → --font-display (display, headlines, numbers, pull quotes)
+     Inter    → --font-body    (UI, paragraphs, labels, all else)         */
+
+  /* ── Typography: Fluid scale ── */
+  /* Two families. One rule: headlines/numbers/italics = Fraunces, everything else = Inter.
+     --text-display overridden per page: home.css → 5rem max, about.css → 4.25rem max.  */
+  --text-display:    clamp(2.25rem, 4.5vw + 1rem, 4rem);   /* 36→64px  case study default */
+  --text-h1:         clamp(2rem, 3.5vw + 1rem, 3rem);      /* 32→48px                     */
+  --text-h2:         clamp(1.5rem, 1.5vw + 1rem, 2.25rem); /* 24→36px  section titles      */
+  --text-h3:         clamp(1.25rem, 0.75vw + 1rem, 1.75rem); /* 20→28px decision/approach */
+  --text-lead:       clamp(1.125rem, 0.5vw + 1rem, 1.375rem); /* 18→22px hero lead        */
+
+  /* ── Typography: Static scale ── */
+  /* Fixed sizes for consistent body/UI text. Tokenized so they change globally. */
+  --text-body:   1.0625rem;  /* 17px — prose paragraphs in case studies & about       */
+  --text-sm:     0.9375rem;  /* 15px — component body: principles, outcomes, timeline  */
+  --text-xs:     0.875rem;   /* 14px — CTAs, scope items, back link, footer socials    */
+  --text-fine:   0.8125rem;  /* 13px — timeline date, work tags, status pill           */
+  --text-label:  0.75rem;    /* 12px — eyebrows, section labels, meta labels           */
+  --text-micro:  0.6875rem;  /* 11px — meta strip labels, node labels (payment flow)   */
+
+  /* ── Typography: Line heights ── */
+  --leading-display: 1.02;   /* hero headline (ultra-tight, purely display) */
+  --leading-heading: 1.15;   /* section headings, case titles               */
+  --leading-snug:    1.25;   /* card titles, sub-headings                   */
+  --leading-normal:  1.5;    /* subtitles, descriptions, pull quotes        */
+  --leading-relaxed: 1.65;   /* component body text                         */
+  --leading-loose:   1.75;   /* prose paragraphs (max readability)          */
+
+  /* ── Typography: Letter spacing (tracking) ── */
+  --tracking-tighter: -0.025em;  /* display / hero titles                  */
+  --tracking-tight:   -0.02em;   /* section headings                        */
+  --tracking-snug:    -0.015em;  /* card titles, work titles                */
+  --tracking-normal:   0em;      /* body text, nav links                    */
+  --tracking-wide:     0.08em;   /* hero meta labels                        */
+  --tracking-wider:    0.12em;   /* eyebrows, uppercase section labels      */
+
+  /* ── Typography: Weights ── */
+  --weight-regular:  400;  /* Fraunces display/body, Inter paragraphs */
+  --weight-medium:   500;  /* Fraunces card titles, Inter labels/CTAs */
+  --weight-semibold: 600;  /* Inter — reserved for rare strong emphasis */
+
+  /* ── Layout ── */
+  --container:        1120px;
+  --container-narrow: 720px;   /* about overrides to 760px */
+  --gutter:           clamp(1.25rem, 4vw, 3rem);
+
+  /* ── Motion ── */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-color:  color 0.2s var(--ease);
+  --transition-bg:     background-color 0.3s var(--ease);
+  --transition-border: border-color 0.3s var(--ease);
+  --transition-transform: transform 0.3s var(--ease);
+  --transition-theme:  background-color 0.3s var(--ease), color 0.3s var(--ease);
+
+  /* ── Radii ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  20px;
+  --radius-3xl:  24px;
+  --radius-full: 999px;
+
+  /* ── Shadows (Gun Metal tinted — cohesive with teal palette) ── */
+  --shadow-sm:  0 10px 30px -10px rgba(0, 39, 44, 0.12);
+  --shadow-md:  0 10px 40px -10px rgba(0, 39, 44, 0.20);
+  --shadow-lg:  0 20px 40px -20px rgba(0, 39, 44, 0.15);
+  --shadow-xl:  0 20px 60px -20px rgba(0, 39, 44, 0.24);
+
+  /* ── Z-index Scale ── */
+  --z-nav:   50;
+  --z-skip: 100;
+}
+
+/* ── Dark Mode ──────────────────────────────────────── */
+/* Gun Metal is the base. Chartreuse is the accent.
+   Chartreuse on Gun Metal = 13.2:1 contrast ratio.     */
+[data-theme="dark"] {
+  --color-bg:             #00272C;   /* Gun Metal — base surface             */
+  --color-bg-elevated:    #003540;   /* hsl(186, 100%, 12.5%) — cards/panels */
+  --color-bg-muted:       #001D22;   /* hsl(186, 100%, 6.7%)  — recessed     */
+  --color-text:           #EDF9FA;   /* hsl(186, 75%, 95%)  — 13:1 on bg ✓  */
+  --color-text-secondary: #7AB4BC;   /* hsl(186, 35%, 60%)  — 6.9:1 ✓       */
+  --color-text-tertiary:  #4D8E98;   /* hsl(186, 33%, 45%)  — 3.9:1          */
+  --color-border:         #0B404A;   /* hsl(186, 72%, 17%)  — visible edge   */
+  --color-border-subtle:  #042D34;   /* hsl(186, 78%, 11%)  — hairline       */
+  --color-accent:         #E1FF51;   /* Chartreuse — 13.2:1 on bg ✓✓        */
+  --color-accent-hover:   #E9FF6E;   /* Chartreuse +8% L                     */
+  --color-accent-muted:   #182F00;   /* hsl(90, 100%, 9%)   — chip bg        */
+}

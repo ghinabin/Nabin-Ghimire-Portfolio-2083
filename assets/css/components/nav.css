@@ -1,0 +1,81 @@
+/* =====================================================
+   COMPONENT — Navigation
+   ===================================================== */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  transition: var(--transition-color);
+  position: relative;
+}
+.nav-link:hover { color: var(--accent); }
+
+/* Active page indicator */
+.nav-link[aria-current="page"] {
+  color: var(--accent);
+}
+.nav-link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -20px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  transition: background-color 0.2s var(--ease), var(--transition-color);
+}
+.theme-toggle:hover {
+  background: var(--bg-muted);
+  color: var(--text);
+}
+.theme-toggle svg { width: 18px; height: 18px; }
+
+/* Icon visibility — driven by data-theme on body */
+.theme-toggle .icon-sun  { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* Mobile */
+@media (max-width: 640px) {
+  .nav-links { gap: 1.25rem; }
+  .nav-link[data-hide-mobile] { display: none; }
+}

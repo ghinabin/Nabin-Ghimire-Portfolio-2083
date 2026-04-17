@@ -1,0 +1,18 @@
+# Next.js
+.next/
+out/
+
+# Dependencies
+node_modules/
+
+# Misc
+.DS_Store
+*.pem
+.env*
+!.env.example
+
+# Vercel
+.vercel
+
+# Old HTML source files (migrated to Next.js)
+*.html

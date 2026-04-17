@@ -1,0 +1,155 @@
+/* =====================================================
+   PAGE — Claims Payment case study (claims.html)
+   ===================================================== */
+
+/* ── Hero visual: payment flow gradient ── */
+.case-visual-bg {
+  background:
+    radial-gradient(ellipse at 50% 50%, var(--accent-muted) 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg-muted) 0%, var(--bg-elevated) 100%);
+}
+
+/* ── Payment flow diagram ── */
+.payment-flow {
+  position: relative;
+  z-index: 1;
+  width: min(90%, 720px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 0;
+}
+
+.payment-flow .node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.payment-flow .node-circle {
+  width: clamp(44px, 7vw, 64px);
+  height: clamp(44px, 7vw, 64px);
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  font-size: clamp(1rem, 2vw, 1.375rem);
+  color: var(--accent);
+  font-weight: 500;
+}
+.payment-flow .node.active .node-circle {
+  background: var(--accent);
+  color: var(--bg-elevated);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 6px var(--accent-muted);
+}
+
+.payment-flow .node-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .payment-flow .node-label { display: none; }
+}
+
+.payment-flow .connector {
+  height: 1px;
+  background: var(--border);
+  position: relative;
+  margin: 0 -2px;
+  margin-bottom: 32px;
+}
+.payment-flow .connector.active { background: var(--accent); }
+
+@media (max-width: 560px) {
+  .payment-flow .node-label { font-size: 0.5625rem; letter-spacing: 0.04em; }
+}
+
+/* ── Before / After workflow comparison ── */
+.workflow-compare {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+@media (min-width: 768px) {
+  .workflow-compare {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.workflow-panel {
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+}
+.workflow-panel.before { background: var(--bg-muted); }
+.workflow-panel.after  { background: var(--bg-elevated); border-color: var(--accent-muted); }
+
+.workflow-panel-label {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+.workflow-panel.after .workflow-panel-label { color: var(--accent); }
+
+.workflow-panel h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 0 0 1.25rem;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+
+.workflow-panel ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: step;
+}
+.workflow-panel ol li {
+  counter-increment: step;
+  position: relative;
+  padding: 0.625rem 0 0.625rem 2.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.workflow-panel ol li:last-child { border-bottom: none; }
+.workflow-panel ol li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 0.625rem;
+  width: 24px; height: 24px;
+  display: grid;
+  place-items: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  font-family: var(--font-display);
+}
+.workflow-panel.after ol li::before {
+  background: var(--accent);
+  color: var(--bg-elevated);
+  border-color: var(--accent);
+}

@@ -1,0 +1,295 @@
+/* =====================================================
+   PAGE — Find Care case study
+   ===================================================== */
+
+/* ── Hero visual: before/after phones ── */
+.case-visual-bg {
+  background:
+    radial-gradient(ellipse at 70% 50%, var(--accent-muted) 0%, transparent 55%),
+    linear-gradient(160deg, var(--bg-muted) 0%, var(--bg-elevated) 100%);
+}
+
+.findcare-hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: center;
+  width: 85%;
+}
+
+.findcare-phone {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(10px, 2vw, 16px);
+  box-shadow: var(--shadow-xl);
+  flex: 1;
+  max-width: 240px;
+  aspect-ratio: 9 / 16;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.findcare-phone.before {
+  opacity: 0.7;
+  transform: rotate(-3deg);
+}
+.findcare-phone.after {
+  transform: rotate(3deg);
+}
+
+.findcare-phone .search-bar {
+  padding: 8px 10px;
+  background: var(--bg-muted);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.findcare-phone .search-bar::before {
+  content: "";
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-tertiary);
+  flex-shrink: 0;
+}
+.findcare-phone .search-bar .query {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.findcare-phone .result {
+  padding: 8px;
+  background: var(--bg-muted);
+  border-radius: 6px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.findcare-phone .result::before {
+  content: "";
+  width: 18px; height: 18px;
+  background: var(--border);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.findcare-phone .result .lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.findcare-phone .result .lines span {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+}
+.findcare-phone .result .lines span:first-child { width: 60%; }
+.findcare-phone .result .lines span:last-child  { width: 40%; }
+
+.findcare-phone.before .error-row {
+  padding: 8px;
+  background: var(--bg-muted);
+  border-radius: 6px;
+  opacity: 0.4;
+  font-size: 9px;
+  color: var(--text-tertiary);
+}
+
+.findcare-phone .cat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+.findcare-phone .cat-tile {
+  background: var(--bg-muted);
+  border-radius: 6px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: 6px;
+}
+.findcare-phone .cat-tile::after {
+  content: "";
+  width: 60%; height: 4px;
+  background: var(--text-secondary);
+  opacity: 0.4;
+  border-radius: 2px;
+}
+.findcare-phone .cat-tile.highlight {
+  background: var(--accent-muted);
+}
+.findcare-phone .cat-tile.highlight::after {
+  background: var(--accent);
+  opacity: 1;
+}
+
+/* ── Big insight centerpiece ── */
+.big-insight {
+  position: relative;
+  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+  background: var(--bg-muted);
+  border-radius: var(--radius-2xl);
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.big-insight-label {
+  font-size: var(--text-label);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--accent);
+  margin: 0 0 1.5rem;
+}
+
+.big-insight-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.75rem, 2.5vw + 1rem, 3rem);
+  line-height: 1.15;
+  letter-spacing: var(--tracking-snug);
+  color: var(--text);
+  margin: 0 auto 1.5rem;
+  max-width: 20ch;
+}
+.big-insight-quote em {
+  color: var(--accent);
+}
+
+.big-insight-context {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  max-width: 48ch;
+  margin: 0 auto;
+  line-height: var(--leading-normal);
+}
+
+/* ── Query-intent table ── */
+.query-table {
+  margin: 2rem 0;
+  padding: 1.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.query-table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.query-table-header span {
+  font-size: var(--text-micro);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--accent);
+}
+
+.query-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: center;
+}
+.query-row:last-child { border-bottom: none; }
+
+.query-row .typed {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+.query-row .typed::before {
+  content: "\201C";
+  color: var(--text-tertiary);
+  margin-right: 2px;
+}
+.query-row .typed::after {
+  content: "\201D";
+  color: var(--text-tertiary);
+  margin-left: 2px;
+}
+
+.query-row .needed {
+  font-size: var(--text-sm);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.query-row .needed svg {
+  width: 14px; height: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── Design moves (3-col) ── */
+.moves {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .moves {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.move {
+  padding: 2rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  transition: var(--transition-border), var(--transition-transform);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.move:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.move-num {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  color: var(--accent);
+}
+
+.move h3 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  font-size: 1.375rem;
+  line-height: 1.25;
+  margin: 0;
+  color: var(--text);
+  letter-spacing: var(--tracking-tight);
+}
+
+.move p {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ── Mobile: collapse query table columns ── */
+@media (max-width: 500px) {
+  .query-table-header,
+  .query-row { grid-template-columns: 1fr; gap: 0.375rem; }
+  .query-table-header span:last-child { display: none; }
+  .query-row .needed { display: none; }
+}
