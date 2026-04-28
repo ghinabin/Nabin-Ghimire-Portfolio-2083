@@ -126,13 +126,13 @@ export default function HomePage() {
             <Link href="/claims" className="work-card">
               <div className="work-thumb">
                 <div className="work-thumb-visual visual-claims">
-                  <div className="visual-claims-content" aria-hidden="true">
-                    <div className="node">$</div>
-                    <div className="line" />
-                    <div className="node">✓</div>
-                    <div className="line" />
-                    <div className="node">→</div>
-                  </div>
+                  <Image
+                    src="/images/thumb-claims.png"
+                    alt="From paper checks to digital claims payments — healthcare workflow"
+                    fill
+                    className="work-thumb-img"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
               <div className="work-tag-row">

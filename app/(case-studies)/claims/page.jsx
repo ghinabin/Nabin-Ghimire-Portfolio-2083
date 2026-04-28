@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import '@/assets/css/pages/claims.css'
 
@@ -40,54 +41,16 @@ export default function ClaimsPage() {
             integrated with Zelis for ACH and check disbursement.
           </p>
 
-          <div className="case-visual" role="img" aria-label="Abstract payment flow diagram showing five stages: generate, approve, dispatch, track, reconcile">
+          <div className="case-visual case-visual--image" role="img" aria-label="From paper checks to digital claims payments — healthcare workflow">
             <div className="case-visual-bg" />
-            <div className="payment-flow" aria-hidden="true">
-              <div className="node active">
-                <div className="node-circle">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                </div>
-                <div className="node-label">Generate</div>
-              </div>
-              <div className="connector active" />
-              <div className="node active">
-                <div className="node-circle">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <div className="node-label">Approve</div>
-              </div>
-              <div className="connector active" />
-              <div className="node active">
-                <div className="node-circle">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
-                  </svg>
-                </div>
-                <div className="node-label">Dispatch</div>
-              </div>
-              <div className="connector" />
-              <div className="node">
-                <div className="node-circle">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
-                  </svg>
-                </div>
-                <div className="node-label">Track</div>
-              </div>
-              <div className="connector" />
-              <div className="node">
-                <div className="node-circle">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 12l2 2 4-4" />
-                  </svg>
-                </div>
-                <div className="node-label">Reconcile</div>
-              </div>
-            </div>
+            <Image
+              src="/images/thumb-claims.png"
+              alt="From paper checks to digital claims payments"
+              fill
+              className="case-visual-img"
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1120px"
+            />
           </div>
 
           <div className="meta-strip">
