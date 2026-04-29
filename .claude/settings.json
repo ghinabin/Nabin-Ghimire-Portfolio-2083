@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/nabinghimire/Portfolio_New/public/images"
+    ],
+    "allow": [
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
