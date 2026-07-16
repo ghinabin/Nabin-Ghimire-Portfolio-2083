@@ -397,6 +397,104 @@
 }
 .work-card:hover .work-cta svg { transform: translateX(3px); }
 
+/* ── Other work (Industrial Vision) ── */
+.other-work {
+  margin-top: clamp(4rem, 8vw, 5rem);
+}
+
+.other-work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.other-work-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  color: inherit;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--bg-muted);
+  border-radius: var(--radius-2xl);
+  transition: transform 0.4s var(--ease);
+}
+.other-work-card:hover { transform: translateY(-2px); }
+@media (min-width: 768px) {
+  .other-work-card {
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+.other-work-visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.other-work-img {
+  object-fit: cover;
+  object-position: center 30%;
+  filter: saturate(0.9) brightness(0.97);
+  transition: transform 0.7s var(--ease), filter 0.4s var(--ease);
+}
+.other-work-card:hover .other-work-img {
+  transform: scale(1.03);
+  filter: saturate(1) brightness(1);
+}
+
+.iv-card-stack {
+  position: relative;
+  width: 45%;
+  aspect-ratio: 3 / 4;
+}
+.iv-card-stack .cover {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.iv-card-stack .cover:nth-child(1) { transform: rotate(-8deg) translateX(-16%); opacity: 0.7; }
+.iv-card-stack .cover:nth-child(2) { transform: rotate(-2deg) translateX(-5%); opacity: 0.88; }
+.iv-card-stack .cover:nth-child(3) { transform: rotate(5deg) translateX(7%); }
+
+.nv-card-portal {
+  position: relative;
+  width: 55%;
+  aspect-ratio: 1;
+}
+.nv-card-portal .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--accent), var(--bg) 60%, var(--accent-muted));
+  opacity: 0.85;
+}
+.nv-card-portal .ring::after {
+  content: "";
+  position: absolute;
+  inset: 24%;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+}
+.nv-card-portal .dot {
+  position: absolute;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 2px solid var(--accent);
+}
+.nv-card-portal .dot:nth-of-type(2) { top: 4%; left: 8%; }
+.nv-card-portal .dot:nth-of-type(3) { bottom: 6%; right: 4%; }
+
 /* ── About strip ── */
 .about-strip {
   background: var(--bg-muted);

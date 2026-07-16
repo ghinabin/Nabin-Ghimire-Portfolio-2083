@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: ANTI_FOUC }} />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <a href="#main" className="skip-link">Skip to content</a>
         <Nav />
         <main id="main">{children}</main>

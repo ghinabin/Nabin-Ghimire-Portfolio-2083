@@ -1,0 +1,203 @@
+/* =====================================================
+   PAGE — Industrial Vision case study
+   Placeholder visuals below stand in for real magazine
+   photography/mockups — see IMAGE-CHECKLIST.md §7.
+   ===================================================== */
+
+/* ── Hero: stacked cover placeholder ── */
+.iv-cover-stack {
+  position: relative;
+  width: 56%;
+  max-width: 260px;
+  aspect-ratio: 3 / 4;
+}
+.iv-cover-stack .cover {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+}
+.iv-cover-stack .cover:nth-child(1) { transform: rotate(-7deg) translateX(-14%); opacity: 0.75; }
+.iv-cover-stack .cover:nth-child(2) { transform: rotate(-2deg) translateX(-5%); opacity: 0.9; }
+.iv-cover-stack .cover:nth-child(3) { transform: rotate(4deg) translateX(6%); }
+.iv-cover-stack .cover-mark {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+}
+.iv-cover-stack .cover-line {
+  margin-top: 8px;
+  height: 4px;
+  width: 60%;
+  background: var(--border);
+  border-radius: 2px;
+}
+
+/* ── Context notice (reuses .nda-notice box styling from case-study.css) ── */
+
+/* ── Cover wall ── */
+.cover-wall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+}
+@media (min-width: 640px) {
+  .cover-wall { grid-template-columns: repeat(5, 1fr); }
+}
+
+.cover-tile {
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  text-align: center;
+  transition: var(--transition-border);
+}
+.cover-tile:hover { border-color: var(--accent); }
+
+.cover-tile-num {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.cover-tile-theme {
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  line-height: 1.3;
+}
+
+.cover-tile--pending {
+  border-style: dashed;
+  background: transparent;
+}
+.cover-tile--pending .cover-tile-num { color: var(--text-tertiary); }
+
+.theme-line {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0 0 3rem;
+  max-width: 62ch;
+}
+
+/* ── Flagship deep-dive surfaces ── */
+.iv-surfaces {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .iv-surfaces { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+}
+
+.iv-surface-visual {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-xl);
+  background: var(--bg-muted);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.iv-surface-label {
+  display: block;
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--text-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.iv-surface h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+.iv-surface p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+  margin: 0;
+}
+
+/* Cover placeholder */
+.iv-mock-cover {
+  width: 70%;
+  aspect-ratio: 3 / 4;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+}
+.iv-mock-cover .mark { font-family: var(--font-display); font-size: 0.9375rem; color: var(--accent); }
+.iv-mock-cover .theme { height: 5px; width: 70%; background: var(--border); border-radius: 2px; }
+
+/* Spread placeholder */
+.iv-mock-spread {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.iv-mock-spread .col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.iv-mock-spread .col span { height: 5px; background: var(--border); border-radius: 2px; }
+.iv-mock-spread .col span:nth-child(1) { width: 80%; }
+.iv-mock-spread .col span:nth-child(2) { width: 100%; }
+.iv-mock-spread .col span:nth-child(3) { width: 65%; }
+.iv-mock-spread .col.image { background: var(--bg-elevated); border-radius: 4px; }
+
+/* Masthead placeholder */
+.iv-mock-masthead {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.iv-mock-masthead .row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iv-mock-masthead .row .dot {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--accent-muted);
+  flex-shrink: 0;
+}
+.iv-mock-masthead .row span:last-child {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+}

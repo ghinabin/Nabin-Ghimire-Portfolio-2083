@@ -49,7 +49,6 @@ export default function HomePage() {
           <div className="section-header">
             <div>
               <p className="section-eyebrow">Selected work</p>
-              <h2 className="section-title">Four projects, one principle: make the complex clear.</h2>
             </div>
             <span className="section-meta">2021 — 2026</span>
           </div>
@@ -195,6 +194,82 @@ export default function HomePage() {
               </span>
             </Link>
 
+          </div>
+
+          {/* OTHER WORK */}
+          <div className="other-work" id="other-work">
+            <div className="section-header">
+              <div>
+                <p className="section-eyebrow">Also worth a look</p>
+              </div>
+              <span className="section-meta">2016 — Present</span>
+            </div>
+
+            <div className="other-work-list">
+              <Link href="/industrial-vision" className="other-work-card">
+                <div className="other-work-visual" aria-hidden="true">
+                  <div className="iv-card-stack">
+                    <div className="cover" />
+                    <div className="cover" />
+                    <div className="cover" />
+                  </div>
+                </div>
+                <div className="other-work-content">
+                  <div className="work-tag-row">
+                    <span>Editorial design</span>
+                    <span className="dot" />
+                    <span>SOIESNEPAL, Thapathali Campus</span>
+                    <span className="dot" />
+                    <span>2016 — Present</span>
+                  </div>
+                  <h3 className="work-title">Building the visual identity behind Innovation, Industry, Prosperity.</h3>
+                  <p className="work-desc">
+                    Design Lead &amp; Art Director for Industrial Vision, a print magazine featuring
+                    original engineering research and funded by industry advertising. Shaped its
+                    visual identity since IV 2 — from cover concept to print production.
+                  </p>
+                  <span className="work-cta">
+                    Read case study
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+
+              <Link href="/nepverse" className="other-work-card">
+                <div className="other-work-visual">
+                  <Image
+                    src="/images/Display screen.png"
+                    alt="A user standing before a large interactive display screen inside the Nepverse virtual exhibition hall"
+                    fill
+                    className="other-work-img"
+                    sizes="(max-width: 768px) 100vw, 220px"
+                  />
+                </div>
+                <div className="other-work-content">
+                  <div className="work-tag-row">
+                    <span>R&amp;D · VR / 3D</span>
+                    <span className="dot" />
+                    <span>EKbana</span>
+                    <span className="dot" />
+                    <span>2021 — 2022</span>
+                  </div>
+                  <h3 className="work-title">Prototyping a metaverse businesses could actually rent space in.</h3>
+                  <p className="work-desc">
+                    Product designer &amp; 3D artist on a 5-person R&amp;D team at EKbana — took a
+                    COVID-era idea from sketch to a working multiplayer VR prototype in Unity, with
+                    exhibition halls and a 1,000-person concert venue.
+                  </p>
+                  <span className="work-cta">
+                    Read case study
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            </div>
           </div>
 
           {/* ABOUT STRIP */}
