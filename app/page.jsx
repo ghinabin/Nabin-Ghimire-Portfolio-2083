@@ -61,7 +61,7 @@ export default function HomePage() {
               <div className="work-thumb">
                 <div className="work-thumb-visual visual-viveka">
                   <Image
-                    src="/images/design-system.avif"
+                    src="/images/design-system.png"
                     alt="Viveka Design System component library"
                     fill
                     className="work-thumb-img"

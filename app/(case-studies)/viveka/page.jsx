@@ -44,7 +44,7 @@ export default function VivekaPage() {
           <div className="case-visual case-visual--image" role="img" aria-label="Viveka Design System — component library overview in Figma">
             <div className="case-visual-bg" />
             <Image
-              src="/images/design-system.avif"
+              src="/images/design-system.png"
               alt="Viveka Design System component library showing tokens, components, and documentation in Figma"
               fill
               className="case-visual-img"
