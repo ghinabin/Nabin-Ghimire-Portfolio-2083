@@ -35,7 +35,7 @@ Real resume in, opens in a new tab. Done.
 
 ## 2. Homepage Thumbnails
 
-### [x] 2.1 — Viveka thumb `public/images/design-system.avif`
+### [x] 2.1 — Viveka thumb `public/images/design-system.png`
 Real Figma export, already wired in. Done.
 
 ### [x] 2.2 — Claims thumb `public/images/thumb-claims.png`
@@ -53,13 +53,15 @@ Generic laptop device shot standing in. Swap for a real DOCS.ink product screens
 
 ## 3. Viveka Design System Case Study
 
-### [x] 3.1 — Hero / component library `public/images/design-system.avif`
-Already real, already wired. Done.
+### [x] 3.1 — Hero / component library `public/images/design-system.png`
+Real Figma export, already wired. Done.
 
-### [ ] 3.2 — Supporting visual: token or component sheet (new slot, not yet in code)
-**Would go in:** the "Start with tokens, not components" decision (decision-num 01) in [viveka/page.jsx](app/(case-studies)/viveka/page.jsx#L167)
-**What it should show:** an annotated screenshot of your actual tokens panel in Figma, or a before/after grid of "5 button variants → 1" — this is the single highest-leverage image you could add to this case study, since it's the one claim ("fragmentation → one system") that's currently text-only.
-**Aspect ratio:** 16:10 or 4:3, whichever fits the real screenshot without cropping awkwardly.
+### [~] 3.2 — Supporting visual: token sample, in "Start with tokens, not components" (decision-num 01)
+**Wired at:** [viveka/page.jsx:232](app/(case-studies)/viveka/page.jsx#L232) — a CSS-only swatch strip (`.token-sample`, styles in [case-study.css](assets/css/components/case-study.css)) pulling colors straight from the site's own tokens. No image file needed — it works as a permanent abstract visual, same spirit as the Find Care CSS phone mockups (6.1/6.2 below).
+**Optional upgrade, not urgent:** swap for a real screenshot of your Figma tokens panel if you want more literal proof. If you do: save as `public/images/viveka-tokens-sheet.jpg`, 16:10 or 4:3, and replace the `<div className="token-sample">` block with an `<Image fill>` the same way the hero visual is wired — ping me when it's ready.
+
+### [x] 3.3 — Audit evidence: stat strip, in the Research section
+**Wired at:** [viveka/page.jsx:164](app/(case-studies)/viveka/page.jsx#L164) — four real, generalized numbers from the actual audit (`.stat-strip` / `.stat-value` / `.stat-label`, styles in [case-study.css](assets/css/components/case-study.css)). No image needed at all — this replaces what would've been an audit screenshot with typography-driven data, which sidesteps the NDA concern about showing real product UI. Done, nothing to swap later unless you want real screenshots alongside it.
 
 ---
 
@@ -136,10 +138,10 @@ Not present at all currently — the site has no favicon.
 | 1 | ~~`resume.pdf`~~ | ✅ done | — |
 | 2 | `nabin-headshot.jpg` | Trust/approachability on About page | when you can shoot it |
 | 3 | Claims workflow diagram | Highest-leverage visual — this case study is literally about a workflow redesign | 30–60 min in Figma |
-| 4 | Viveka token/component sheet | Proves "design system" claim visually, not just in prose | 15 min (screenshot + annotate) |
-| 5 | DOCS.ink surfaces (4 files) | Already has code slots + placeholders; real screenshots upgrade an already-working page | 5 min each if screenshots exist |
-| 6 | Favicon + OG image | Cheap, professional polish before sending the link to a recruiter | ~1 hr combined |
-| 7 | Find Care phone mockups | CSS placeholder already looks fine — lowest priority | if time |
+| 4 | DOCS.ink surfaces (4 files) | Already has code slots + placeholders; real screenshots upgrade an already-working page | 5 min each if screenshots exist |
+| 5 | Favicon + OG image | Cheap, professional polish before sending the link to a recruiter | ~1 hr combined |
+| 6 | Find Care phone mockups | CSS placeholder already looks fine — lowest priority | if time |
+| 7 | Viveka tokens sheet | Optional only — the CSS token sample (3.2) already covers this; a real screenshot is a "more literal proof" upgrade, not a gap | if time |
 | 8 | Homepage thumb swaps (DOCS.ink, Find Care) | Nice-to-have, not urgent | later |
 
 ---
@@ -153,8 +155,8 @@ public/
   favicon.svg / favicon.ico           ← 7.2
   images/
     nabin-headshot.jpg                ← 1.1, about page portrait
-    design-system.avif                ← 3.1 ✅ real, done
-    viveka-tokens-sheet.jpg           ← 3.2, new slot — needs code wiring
+    design-system.png                 ← 2.1 / 3.1 ✅ real, done
+    viveka-tokens-sheet.jpg           ← 3.2, optional upgrade — CSS token sample works fine as-is
     thumb-claims.png                  ← 2.2 / 4.1 ✅ real, done
     claims-workflow-diagram.jpg       ← 4.2, new slot — needs code wiring
     thumb-docsink.png                 ← 2.3, placeholder in
