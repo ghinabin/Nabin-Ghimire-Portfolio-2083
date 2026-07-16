@@ -271,7 +271,7 @@ export default function ClaimsPage() {
       {/* NEXT */}
       <section className="next-case">
         <div className="container">
-          <a href="#" className="next-case-card">
+          <Link href="/findcare" className="next-case-card">
             <p className="next-case-label">Next case study</p>
             <h2 className="next-case-title">Making healthcare search actually work.</h2>
             <p className="next-case-desc">
@@ -284,7 +284,7 @@ export default function ClaimsPage() {
                 <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
               </svg>
             </span>
-          </a>
+          </Link>
         </div>
       </section>
     </>
