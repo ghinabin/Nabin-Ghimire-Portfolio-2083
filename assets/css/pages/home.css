@@ -148,7 +148,7 @@
 .work-thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   background: var(--bg-muted);
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -158,6 +158,8 @@
 }
 .work-card:hover .work-thumb { border-color: var(--accent); }
 .work-card--feature .work-thumb { aspect-ratio: 21 / 9; }
+/* Feature banner center-crops the shared 16:9 image (keeps the middle band). */
+.work-card--feature .work-thumb-img { object-position: center; }
 
 .work-thumb-visual {
   position: absolute;
@@ -403,23 +405,6 @@
   transform: scale(1.03);
   filter: saturate(1) brightness(1);
 }
-
-.iv-card-stack {
-  position: relative;
-  width: 45%;
-  aspect-ratio: 3 / 4;
-}
-.iv-card-stack .cover {
-  position: absolute;
-  inset: 0;
-  border-radius: 6px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-}
-.iv-card-stack .cover:nth-child(1) { transform: rotate(-8deg) translateX(-16%); opacity: 0.7; }
-.iv-card-stack .cover:nth-child(2) { transform: rotate(-2deg) translateX(-5%); opacity: 0.88; }
-.iv-card-stack .cover:nth-child(3) { transform: rotate(5deg) translateX(7%); }
 
 .nv-card-portal {
   position: relative;

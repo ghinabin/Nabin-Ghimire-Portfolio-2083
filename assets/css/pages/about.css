@@ -94,6 +94,11 @@
   .photo-frame { max-width: none; }
 }
 
+.photo-img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .photo-placeholder {
   position: absolute;
   inset: 0;

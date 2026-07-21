@@ -48,22 +48,16 @@ export default function DocsinkPage() {
             </svg>
           </a>
 
-          <div className="case-visual" role="img" aria-label="Abstract representation of digital waivers being signed">
+          <div className="case-visual case-visual--image" role="img" aria-label="DOCS.ink digital waiver platform">
             <div className="case-visual-bg" />
-            <div className="docsink-hero-stack" aria-hidden="true">
-              <div className="doc">
-                <div className="line" /><div className="line" /><div className="line" /><div className="line" />
-                <div className="signature" />
-              </div>
-              <div className="doc">
-                <div className="line" /><div className="line" /><div className="line" /><div className="line" />
-                <div className="signature" />
-              </div>
-              <div className="doc">
-                <div className="line" /><div className="line" /><div className="line" /><div className="line" />
-                <div className="signature" />
-              </div>
-            </div>
+            <Image
+              src="/images/thumb-docsink.png"
+              alt="DOCS.ink digital waiver platform"
+              fill
+              className="case-visual-img"
+              sizes="(max-width: 768px) 100vw, 1120px"
+              priority
+            />
           </div>
 
           <div className="meta-strip">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import '@/assets/css/pages/about.css'
 
 export const metadata = {
@@ -25,9 +26,14 @@ export default function AboutPage() {
           <div className="intro-grid">
             <div>
               <div className="photo-frame">
-                <div className="photo-placeholder">
-                  <span className="photo-placeholder-initials">NG</span>
-                </div>
+                <Image
+                  src="/images/nabin-headshot.jpg"
+                  alt="Nabin Ghimire — Senior Product Designer, Kathmandu"
+                  fill
+                  className="photo-img"
+                  sizes="(max-width: 768px) 280px, 360px"
+                  priority
+                />
               </div>
               <span className="photo-caption">Kathmandu, 2026</span>
             </div>

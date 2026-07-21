@@ -196,12 +196,14 @@ export default function HomePage() {
 
             <div className="other-work-list">
               <Link href="/industrial-vision" className="other-work-card">
-                <div className="other-work-visual" aria-hidden="true">
-                  <div className="iv-card-stack">
-                    <div className="cover" />
-                    <div className="cover" />
-                    <div className="cover" />
-                  </div>
+                <div className="other-work-visual">
+                  <Image
+                    src="/images/industrial-vision-hero.png"
+                    alt="Industrial Vision — printed engineering magazine covers"
+                    fill
+                    className="other-work-img"
+                    sizes="(max-width: 768px) 100vw, 220px"
+                  />
                 </div>
                 <div className="other-work-content">
                   <div className="work-tag-row">

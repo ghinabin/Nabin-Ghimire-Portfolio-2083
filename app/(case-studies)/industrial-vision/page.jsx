@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import '@/assets/css/pages/industrial-vision.css'
 
 export const metadata = {
@@ -6,6 +7,18 @@ export const metadata = {
   description:
     'Art-directing the visual identity behind Innovation, Industry, Prosperity — a print magazine of original engineering research. A case study by Nabin Ghimire.',
 }
+
+const covers = [
+  { ed: 'IV 2', src: '/images/IV2.webp', theme: null },
+  { ed: 'IV 3', src: '/images/IV3.webp', theme: 'Lean Manufacturing' },
+  { ed: 'IV 4', src: '/images/IV4.webp', theme: null },
+  { ed: 'IV 5', src: '/images/IV5.webp', theme: null },
+  { ed: 'IV 6', src: '/images/IV6.webp', theme: null },
+  { ed: 'IV 7', src: '/images/IV7.webp', theme: null },
+  { ed: 'IV 8', src: '/images/IV8.webp', theme: 'Sustainable Energy' },
+  { ed: 'IV 9', src: '/images/IV9.webp', theme: 'Artificial Intelligence' },
+  { ed: 'IV 10', src: '/images/IV10.webp', theme: 'Industry in Nepal' },
+]
 
 export default function IndustrialVisionPage() {
   return (
@@ -40,22 +53,16 @@ export default function IndustrialVisionPage() {
             industry advertising, and a visual identity I&apos;ve shaped since IV 2.
           </p>
 
-          <div className="case-visual" role="img" aria-label="Stack of three Industrial Vision magazine covers, representing multiple yearly editions">
-            <div className="case-visual-bg" />
-            <div className="iv-cover-stack" aria-hidden="true">
-              <div className="cover">
-                <span className="cover-mark">IV</span>
-                <span className="cover-line" />
-              </div>
-              <div className="cover">
-                <span className="cover-mark">IV</span>
-                <span className="cover-line" />
-              </div>
-              <div className="cover">
-                <span className="cover-mark">IV</span>
-                <span className="cover-line" />
-              </div>
-            </div>
+          <div className="case-visual case-visual--image">
+            <Image
+              src="/images/industrial-vision-hero.png"
+              alt="Industrial Vision magazine covers across multiple yearly editions, showing the consistent visual identity built for Innovation, Industry, Prosperity"
+              width={1376}
+              height={768}
+              className="case-visual-img"
+              sizes="(max-width: 768px) 100vw, 1120px"
+              priority
+            />
           </div>
 
           <div className="meta-strip">
@@ -193,15 +200,18 @@ export default function IndustrialVisionPage() {
           <h2 className="section-title">IV 2 to IV 10 — same DNA, evolving execution.</h2>
 
           <div className="cover-wall" aria-label="Grid of Industrial Vision editions, IV 2 through IV 10, with IV 11 in progress">
-            <div className="cover-tile"><span className="cover-tile-num">IV 2</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 3</span><span className="cover-tile-theme">Lean Manufacturing</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 4</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 5</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 6</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 7</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 8</span><span className="cover-tile-theme">Sustainable Energy</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 9</span><span className="cover-tile-theme">Artificial Intelligence</span></div>
-            <div className="cover-tile"><span className="cover-tile-num">IV 10</span><span className="cover-tile-theme">Industry in Nepal</span></div>
+            {covers.map(({ ed, src, theme }) => (
+              <figure key={ed} className="cover-tile cover-tile--image">
+                <Image
+                  src={src}
+                  alt={`Industrial Vision ${ed} cover${theme ? ` — ${theme}` : ''}`}
+                  fill
+                  sizes="(max-width: 640px) 30vw, 18vw"
+                  className="cover-tile-img"
+                />
+                {theme && <figcaption className="cover-tile-caption">{theme}</figcaption>}
+              </figure>
+            ))}
             <div className="cover-tile cover-tile--pending"><span className="cover-tile-num">IV 11</span><span className="cover-tile-theme">In progress</span></div>
           </div>
           <p className="theme-line">
@@ -220,11 +230,14 @@ export default function IndustrialVisionPage() {
 
           <div className="iv-surfaces">
             <div className="iv-surface">
-              <div className="iv-surface-visual">
-                <div className="iv-mock-cover" aria-hidden="true">
-                  <span className="mark">IV 10</span>
-                  <span className="theme" />
-                </div>
+              <div className="iv-surface-visual iv-surface-visual--image">
+                <Image
+                  src="/images/iv-10-cover.jpg"
+                  alt="Industrial Vision 10 — Industry in Nepal, magazine cover"
+                  fill
+                  className="iv-surface-img"
+                  sizes="(max-width: 768px) 100vw, 360px"
+                />
               </div>
               <span className="iv-surface-label">Cover</span>
               <h3>A cover built around one theme.</h3>
@@ -232,17 +245,14 @@ export default function IndustrialVisionPage() {
             </div>
 
             <div className="iv-surface">
-              <div className="iv-surface-visual">
-                <div className="iv-mock-spread" aria-hidden="true">
-                  <div className="col">
-                    <span /><span /><span />
-                    <div className="image" style={{ height: '40%' }} />
-                  </div>
-                  <div className="col">
-                    <div className="image" style={{ height: '50%' }} />
-                    <span /><span />
-                  </div>
-                </div>
+              <div className="iv-surface-visual iv-surface-visual--image">
+                <Image
+                  src="/images/iv-10-spread.jpg"
+                  alt="Industrial Vision 10 — interior feature spread"
+                  fill
+                  className="iv-surface-img"
+                  sizes="(max-width: 768px) 100vw, 360px"
+                />
               </div>
               <span className="iv-surface-label">Feature spread</span>
               <h3>The grid, doing the actual work.</h3>
