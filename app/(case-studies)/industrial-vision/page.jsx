@@ -9,15 +9,15 @@ export const metadata = {
 }
 
 const covers = [
-  { ed: 'IV 2', src: '/images/IV2.webp', theme: null },
-  { ed: 'IV 3', src: '/images/IV3.webp', theme: 'Lean Manufacturing' },
-  { ed: 'IV 4', src: '/images/IV4.webp', theme: null },
-  { ed: 'IV 5', src: '/images/IV5.webp', theme: null },
-  { ed: 'IV 6', src: '/images/IV6.webp', theme: null },
-  { ed: 'IV 7', src: '/images/IV7.webp', theme: null },
-  { ed: 'IV 8', src: '/images/IV8.webp', theme: 'Sustainable Energy' },
-  { ed: 'IV 9', src: '/images/IV9.webp', theme: 'Artificial Intelligence' },
-  { ed: 'IV 10', src: '/images/IV10.webp', theme: 'Industry in Nepal' },
+  { ed: 'IV 2', src: '/images/industrial-vision/covers/IV2.webp', theme: null },
+  { ed: 'IV 3', src: '/images/industrial-vision/covers/IV3.webp', theme: 'Lean Manufacturing' },
+  { ed: 'IV 4', src: '/images/industrial-vision/covers/IV4.webp', theme: null },
+  { ed: 'IV 5', src: '/images/industrial-vision/covers/IV5.webp', theme: null },
+  { ed: 'IV 6', src: '/images/industrial-vision/covers/IV6.webp', theme: null },
+  { ed: 'IV 7', src: '/images/industrial-vision/covers/IV7.webp', theme: null },
+  { ed: 'IV 8', src: '/images/industrial-vision/covers/IV8.webp', theme: 'Sustainable Energy' },
+  { ed: 'IV 9', src: '/images/industrial-vision/covers/IV9.webp', theme: 'Artificial Intelligence' },
+  { ed: 'IV 10', src: '/images/industrial-vision/covers/IV10.webp', theme: 'Industry in Nepal' },
 ]
 
 export default function IndustrialVisionPage() {
@@ -55,7 +55,7 @@ export default function IndustrialVisionPage() {
 
           <div className="case-visual case-visual--image">
             <Image
-              src="/images/industrial-vision-hero.png"
+              src="/images/industrial-vision/industrial-vision-hero.png"
               alt="Industrial Vision magazine covers across multiple yearly editions, showing the consistent visual identity built for Innovation, Industry, Prosperity"
               width={1376}
               height={768}
@@ -232,7 +232,7 @@ export default function IndustrialVisionPage() {
             <div className="iv-surface">
               <div className="iv-surface-visual iv-surface-visual--image">
                 <Image
-                  src="/images/iv-10-cover.jpg"
+                  src="/images/industrial-vision/iv-10-cover.jpg"
                   alt="Industrial Vision 10 — Industry in Nepal, magazine cover"
                   fill
                   className="iv-surface-img"
@@ -247,7 +247,7 @@ export default function IndustrialVisionPage() {
             <div className="iv-surface">
               <div className="iv-surface-visual iv-surface-visual--image">
                 <Image
-                  src="/images/iv-10-spread.jpg"
+                  src="/images/industrial-vision/iv-10-spread.jpg"
                   alt="Industrial Vision 10 — interior feature spread"
                   fill
                   className="iv-surface-img"
@@ -260,12 +260,14 @@ export default function IndustrialVisionPage() {
             </div>
 
             <div className="iv-surface">
-              <div className="iv-surface-visual">
-                <div className="iv-mock-masthead" aria-hidden="true">
-                  <div className="row"><span className="dot" /><span /></div>
-                  <div className="row"><span className="dot" /><span /></div>
-                  <div className="row"><span className="dot" /><span /></div>
-                </div>
+              <div className="iv-surface-visual iv-surface-visual--image">
+                <Image
+                  src="/images/industrial-vision/iv-10-masthead.jpg"
+                  alt="Industrial Vision 10 — masthead and editorial credits page"
+                  fill
+                  className="iv-surface-img"
+                  sizes="(max-width: 768px) 100vw, 360px"
+                />
               </div>
               <span className="iv-surface-label">Masthead</span>
               <h3>The people behind the research.</h3>

@@ -44,7 +44,7 @@ export default function NepversePage() {
           <div className="case-visual case-visual--image" role="img" aria-label="A user standing before a large interactive display screen inside the Nepverse virtual exhibition hall">
             <div className="case-visual-bg" />
             <Image
-              src="/images/Display screen.png"
+              src="/images/nepverse/Display screen.png"
               alt="A user standing before a large interactive display screen inside the Nepverse virtual exhibition hall"
               fill
               className="case-visual-img"
@@ -143,7 +143,7 @@ export default function NepversePage() {
                 <p>Rather than guessing at scope, we ran a structured Five Ws and How process to define exactly what an MVP virtual exhibition needed, before any pixel or polygon.</p>
                 <div className="nv-supporting-visual nv-supporting-visual--diagram">
                   <Image
-                    src="/images/Planning showroom-floorplan.png"
+                    src="/images/nepverse/Planning showroom-floorplan.png"
                     alt="Floor plan of the exhibition hall — stage, floor, and window areas — sketched in Illustrator"
                     fill
                     className="nv-supporting-img"
@@ -189,7 +189,7 @@ export default function NepversePage() {
               <p>Sci-fi-styled portal gates with a swirl transition move users between the exhibition hall, concert venue, and outdoor scene without breaking immersion.</p>
               <div className="nv-supporting-visual nv-supporting-visual--square">
                 <Image
-                  src="/images/Portal.png"
+                  src="/images/nepverse/Portal.png"
                   alt="Close-up of a portal gate model in Unity, with a swirling blue transition effect"
                   fill
                   className="nv-supporting-img"
@@ -236,7 +236,7 @@ export default function NepversePage() {
             <div>
               <div className="nv-env-visual nv-env-visual--image">
                 <Image
-                  src="/images/hall_showroom.png"
+                  src="/images/nepverse/hall_showroom.png"
                   alt="Interior of the Nepverse exhibition hall with product booths and screens"
                   fill
                   className="nv-env-img"
@@ -261,7 +261,7 @@ export default function NepversePage() {
             <div>
               <div className="nv-env-visual nv-env-visual--image">
                 <Image
-                  src="/images/Outdoor planning.png"
+                  src="/images/nepverse/Outdoor planning.png"
                   alt="Top-down layout of the Nepverse outdoor city scene, blocked out in Unity"
                   fill
                   className="nv-env-img"

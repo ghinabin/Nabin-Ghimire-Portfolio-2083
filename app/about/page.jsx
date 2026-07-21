@@ -27,7 +27,7 @@ export default function AboutPage() {
             <div>
               <div className="photo-frame">
                 <Image
-                  src="/images/nabin-headshot.jpg"
+                  src="/images/about/nabin-headshot.jpg"
                   alt="Nabin Ghimire — Senior Product Designer, Kathmandu"
                   fill
                   className="photo-img"

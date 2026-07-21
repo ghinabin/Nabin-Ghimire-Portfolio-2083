@@ -51,7 +51,7 @@ export default function DocsinkPage() {
           <div className="case-visual case-visual--image" role="img" aria-label="DOCS.ink digital waiver platform">
             <div className="case-visual-bg" />
             <Image
-              src="/images/thumb-docsink.png"
+              src="/images/docsink/thumb-docsink.png"
               alt="DOCS.ink digital waiver platform"
               fill
               className="case-visual-img"
@@ -168,7 +168,7 @@ export default function DocsinkPage() {
             <div className="surface">
               <div className="surface-visual surface-visual--image">
                 <Image
-                  src="/images/docsink-surface-builder.webp"
+                  src="/images/docsink/docsink-surface-builder.webp"
                   alt="DOCS.ink waiver builder — two-panel editor with section list and live preview"
                   fill
                   className="surface-img"
@@ -183,7 +183,7 @@ export default function DocsinkPage() {
             <div className="surface">
               <div className="surface-visual surface-visual--image">
                 <Image
-                  src="/images/docsink-surface-signing.jpg"
+                  src="/images/docsink/docsink-surface-signing.jpg"
                   alt="DOCS.ink mobile signing experience — signature pad and document flow on iPhone"
                   fill
                   className="surface-img"
@@ -198,7 +198,7 @@ export default function DocsinkPage() {
             <div className="surface">
               <div className="surface-visual surface-visual--image">
                 <Image
-                  src="/images/docsink-surface-dashboard.png"
+                  src="/images/docsink/docsink-surface-dashboard.png"
                   alt="DOCS.ink business dashboard showing waiver metrics and recent activity"
                   fill
                   className="surface-img"

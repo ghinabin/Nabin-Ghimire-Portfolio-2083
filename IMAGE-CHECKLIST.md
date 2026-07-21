@@ -98,7 +98,7 @@ Real resume in, opens in a new tab. Done.
 
 ## 1. About Page
 
-### [x] 1.1 — Headshot `public/images/nabin-headshot.jpg`
+### [x] 1.1 — Headshot `public/images/about/nabin-headshot.jpg`
 **Wired at:** [about/page.jsx](app/about/page.jsx) — real photo in, replacing the "NG" initials placeholder. `<Image fill>` with `object-fit: cover` (`.photo-img`) filling the 4:5 portrait frame. Done.
 **Optional:** source file is ~6.4 MB — Next.js optimizes it on delivery so it's fine as-is, but compressing/exporting near 1280×1600px would shrink the repo. The old `.photo-placeholder` CSS is left in place, harmless, in case you ever want to revert.
 
@@ -106,17 +106,17 @@ Real resume in, opens in a new tab. Done.
 
 ## 2. Homepage Thumbnails
 
-### [x] 2.1 — Viveka thumb `public/images/design-system.png`
+### [x] 2.1 — Viveka thumb `public/images/viveka/design-system.png`
 Real Figma export, already wired in. Done.
 
-### [x] 2.2 — Claims thumb `public/images/thumb-claims.png`
+### [x] 2.2 — Claims thumb `public/images/claims/thumb-claims.png`
 Real image, already wired in on the homepage card and the claims case-study hero. Done.
 
-### [~] 2.3 — DOCS.ink thumb `public/images/thumb-docsink.png`
+### [~] 2.3 — DOCS.ink thumb `public/images/docsink/thumb-docsink.png`
 **Used by:** [page.jsx](app/page.jsx) homepage card **AND** the DOCS.ink case-study hero — one image, both slots. On the hero it sits on top by default and **fades on hover to reveal the animated document-stack** underneath (`.case-visual--reveal`).
 Generic laptop device shot standing in. Swap for a real DOCS.ink shot built to the master template (16:9, 2240×1260) and it flows into both slots.
 
-### [x] 2.4 — Find Care thumb `public/images/findcare-hero.png`
+### [x] 2.4 — Find Care thumb `public/images/findcare/findcare-hero.png`
 **Used by:** [page.jsx](app/page.jsx) homepage work-grid card. Real Daylight/Find Care product shot (desktop + mobile), wired in with `<Image fill>` the same way the other three cards are. Same file is dual-used as the case-study hero (§6). Done.
 **⚠ NDA note:** this screenshot is fully branded (shows "Daylight", "Viveka Health", and sample patient/provider names) — which sits in tension with the NDA notice on the case-study page that says the client org is generalized and screens are abstract. Decide whether to keep as-is, anonymize the screenshot, or soften that NDA line.
 
@@ -124,7 +124,7 @@ Generic laptop device shot standing in. Swap for a real DOCS.ink shot built to t
 
 ## 3. Viveka Design System Case Study
 
-### [x] 3.1 — Hero / component library `public/images/design-system.png`
+### [x] 3.1 — Hero / component library `public/images/viveka/design-system.png`
 Real Figma export, already wired. Done.
 
 ### [~] 3.2 — Supporting visual: token sample, in "Start with tokens, not components" (decision-num 01)
@@ -138,7 +138,7 @@ Real Figma export, already wired. Done.
 
 ## 4. Claims Payment Case Study
 
-### [x] 4.1 — Hero `public/images/thumb-claims.png`
+### [x] 4.1 — Hero `public/images/claims/thumb-claims.png`
 Real, already wired. Done.
 
 ### [~] 4.2 — Workflow diagram `public/images/claims-workflow-diagram.jpg`
@@ -164,22 +164,22 @@ Real, already wired. Done.
 
 These already have code slots wired and stock/placeholder images in. Swap for real product screenshots (anonymized) when you can.
 
-### [~] 5.1 — Waiver Builder `public/images/docsink-surface-builder.webp`
+### [~] 5.1 — Waiver Builder `public/images/docsink/docsink-surface-builder.webp`
 - **Aspect ratio:** 4:3 · **Size:** 1200×900px
 - **Shows:** two-panel document editor, left sidebar + right content area
 - Real version: export the waiver builder UI from Figma or product, anonymize client data.
 
-### [~] 5.2 — Signing Experience `public/images/docsink-surface-signing.jpg`
+### [~] 5.2 — Signing Experience `public/images/docsink/docsink-surface-signing.jpg`
 - **Aspect ratio:** 4:3 · **Size:** 900×675px
 - **Shows:** phone with a signature/document flow
 - Real version: iPhone frame with your actual signature-pad screen.
 
-### [~] 5.3 — Business Dashboard `public/images/docsink-surface-dashboard.png`
+### [~] 5.3 — Business Dashboard `public/images/docsink/docsink-surface-dashboard.png`
 - **Aspect ratio:** 4:3 · **Size:** 1200×900px
 - **Shows:** web dashboard, stat tiles + activity list
 - Real version: export the dashboard, replace real business names with fakes.
 
-### [ ] 5.4 — Kiosk Mode `public/images/docsink-surface-kiosk.jpg`
+### [ ] 5.4 — Kiosk Mode `public/images/docsink/docsink-surface-kiosk.jpg`
 - **Aspect ratio:** 4:3 · **Size:** 900×675px
 - **Shows:** iPad landscape, check-in/welcome screen
 - Real version: device-mockup export from Figma, iPad landscape frame.
@@ -188,11 +188,11 @@ These already have code slots wired and stock/placeholder images in. Swap for re
 
 ## 6. Find Care Case Study — hero
 
-### [x] 6.1 — Hero `public/images/findcare-hero.png`
+### [x] 6.1 — Hero `public/images/findcare/findcare-hero.png`
 **Wired at:** [findcare/page.jsx](app/(case-studies)/findcare/page.jsx) `.case-visual--image` — real Daylight/Find Care product shot (desktop + mobile), replacing the old before/after CSS phone mockup. Contained (not cropped) on a themed panel with padding + drop-shadow, since the PNG is transparent. **Dual-use:** same file backs the homepage card thumbnail (§2.4). Done.
 **⚠ NDA note:** see §2.4 — branded screenshot vs. the "abstract representations" NDA notice on the page. Your call on how to reconcile.
 
-### [x] 6.2 — Responsive/mobile `public/images/findcare-responsive.png`
+### [x] 6.2 — Responsive/mobile `public/images/findcare/findcare-responsive.png`
 **Wired at:** the new "Responsive design" section, [findcare/page.jsx](app/(case-studies)/findcare/page.jsx) `.responsive-visual` — three-screen mobile mockup of the Daylight portal, contained on the same themed panel as the hero. Done.
 **⚠ NDA note:** same branded-screenshot caveat as §2.4/6.1.
 
@@ -202,24 +202,24 @@ These already have code slots wired and stock/placeholder images in. Swap for re
 
 **Route, homepage section, and CSS are built** at `/industrial-vision`, running entirely on CSS placeholder visuals (stacked-cover hero, cover-wall grid tiles, flagship surface mockups) until real assets land below. All real photos/scans of your own published work, no NDA/anonymization needed.
 
-### [~] 7.1 — Hero `public/images/industrial-vision-hero.png`
-**Wired at:** the case-study hero AND the homepage "Other work" card — one image, both slots. On the card it sits on top by default and **fades on hover to reveal the animated cover-stack fanning open** (`.other-work-visual--reveal`). (Note: the live file is `public/images/industrial-vision-hero.png`, not the `industrial-vision/iv-hero.jpg` path this doc originally planned.)
+### [~] 7.1 — Hero `public/images/industrial-vision/industrial-vision-hero.png`
+**Wired at:** the case-study hero AND the homepage "Other work" card — one image, both slots. On the card it sits on top by default and **fades on hover to reveal the animated cover-stack fanning open** (`.other-work-visual--reveal`).
 Swap the current image for a stronger one built to the master template (16:9, 2240×1260) whenever ready — it flows into both slots. Old CSS stack (`.iv-card-stack`) is kept as the hover reveal.
 - **Aspect ratio:** 16:9 (matches `.case-visual` sitewide)
 - **Shows:** a mockup of 2–3 physical printed covers together — stacked, fanned, or held. Not a single flat cover; the point is "ongoing yearly magazine," not "one issue."
 - **Blocks:** everything else on the page — do this first.
 
-### [ ] 7.2 — Cover wall `public/images/industrial-vision/covers/iv-[edition].jpg`
-**Used by:** the "IV 2 to IV 10 — same DNA, evolving execution" grid, [industrial-vision/page.jsx](app/(case-studies)/industrial-vision/page.jsx) — one file per edition you actually led. Currently `.cover-tile` placeholder boxes with edition number + theme text.
+### [x] 7.2 — Cover wall `public/images/industrial-vision/covers/IV[edition].webp`
+**Used by:** the "IV 2 to IV 10 — same DNA, evolving execution" grid, [industrial-vision/page.jsx](app/(case-studies)/industrial-vision/page.jsx) — one file per edition (`IV2.webp`…`IV10.webp`), wired into the `covers` array and rendered as real `<Image>` tiles. Done for IV 2–10; IV 11 tile stays a dashed "in progress" placeholder until it ships.
 - **Aspect ratio:** pick one consistent portrait crop (e.g. 3:4) and hold it for every tile — the grid only reads as a set if every cover is framed the same way.
 - **Shows:** front cover only, no spreads.
 - **Note:** individual files, not one flattened composite — makes it easy to swap/reorder a single edition later. IV 11 tile is styled as "in progress" (dashed border) — leave that one empty until it ships.
 
-### [ ] 7.3 — Flagship edition deep-dive: IV 10, "Industry in Nepal"
-**Used by:** "Inside IV 10 — Industry in Nepal" section. Currently CSS skeleton mockups (`.iv-mock-cover` / `.iv-mock-spread` / `.iv-mock-masthead`).
-- [x] `public/images/iv-10-cover.jpg` — **in and wired** at the "Inside IV 10" Cover surface (`.iv-surface-visual--image`, fills the 4:3 frame). File is 2400×1792 (4:3). *(Note: saved at `public/images/`, not the `industrial-vision/` subfolder this doc originally planned.)*
-- `public/images/industrial-vision/iv-10-spread.jpg` — 4:3, one real interior feature spread
-- `public/images/industrial-vision/iv-10-masthead.jpg` — 4:3, credits/masthead page
+### [x] 7.3 — Flagship edition deep-dive: IV 10, "Industry in Nepal"
+**Used by:** "Inside IV 10 — Industry in Nepal" section. All three surfaces now wired as real `<Image>` tiles (`.iv-surface-visual--image`), replacing the old CSS skeleton mockups.
+- [x] `public/images/industrial-vision/iv-10-cover.jpg` — Cover surface, fills the 4:3 frame. File is 2400×1792 (4:3).
+- [x] `public/images/industrial-vision/iv-10-spread.jpg` — interior feature spread.
+- [x] `public/images/industrial-vision/iv-10-masthead.jpg` — credits/masthead page. Wired in, replacing the `.iv-mock-masthead` CSS mock.
 Want a different flagship edition instead? Say the word and I'll swap the copy + file paths.
 
 ### Optional, not needed to ship
@@ -232,25 +232,25 @@ Want a different flagship edition instead? Say the word and I'll swap the copy +
 
 **Route, homepage card, and CSS are built** at `/nepverse`. 5 real images are in and wired — only Concert Hall still runs on a CSS placeholder.
 
-### [x] 8.1 — Hero `public/images/Display screen.png`
+### [x] 8.1 — Hero `public/images/nepverse/Display screen.png`
 **Dual-use:** homepage "Other work" card thumbnail AND the case-study hero — same file, same trick as `design-system.png` (2.1/3.1). Real image, wired in both places. Done.
 
-### [x] 8.2 — Exhibition Hall `public/images/hall_showroom.png`
+### [x] 8.2 — Exhibition Hall `public/images/nepverse/hall_showroom.png`
 Interior hall shot, wired into the "Three spaces" section. Done.
 
-### [x] 8.3 — Outdoor Scene `public/images/Outdoor planning.png`
+### [x] 8.3 — Outdoor Scene `public/images/nepverse/Outdoor planning.png`
 Top-down Unity editor screenshot of the outdoor city scene, wired in. Done.
 
-### [x] 8.4 — Portal close-up `public/images/Portal.png`
+### [x] 8.4 — Portal close-up `public/images/nepverse/Portal.png`
 Wired as a supporting visual under the "Portals between spaces" feature. Done.
 
-### [x] 8.5 — Floor plan `public/images/Planning showroom-floorplan.png`
+### [x] 8.5 — Floor plan `public/images/nepverse/Planning showroom-floorplan.png`
 Wired as a supporting visual under Process step 01 (Five Ws / MVP framing). Done.
 
 ### [ ] 8.6 — Concert Hall (still open)
 **Used by:** the middle card in "Three spaces, one connected world." Currently a CSS placeholder (`.nv-mock-concert` — stage + seating rows). None of the 5 images provided depict the Concert Hall specifically (stage + LCD screen + balcony) distinctly enough to use here — drop in a dedicated shot whenever you have one, 4:3, and I'll wire it the same way as the other two environment photos.
 
-**Note:** these 5 files sit directly in `public/images/` (not a `nepverse/` subfolder) with their original names, including spaces — that's fine, Next.js resolves them correctly. Feel free to rename/reorganize later if you'd rather match the `nepverse/nv-*` convention used elsewhere in this doc; just flag it and I'll update the `src` paths to match.
+**Note:** these 5 files now live in `public/images/nepverse/` with their original names, including spaces — that's fine, Next.js resolves them correctly. Rename to an `nv-*` convention later if you like; just flag it and I'll update the `src` paths to match.
 
 ---
 
@@ -282,45 +282,52 @@ Not present at all currently — the site has no favicon.
 | 8 | Homepage thumb swaps (DOCS.ink, Find Care) | Nice-to-have, not urgent | later |
 | 9 | Industrial Vision hero (7.1) | Unblocks the homepage card and the case-study hero together | 30–60 min mockup |
 | 10 | ~~Nepverse hero + 4 more (8.1–8.5)~~ | ✅ done — 5 real images wired in | — |
-| 11 | Industrial Vision cover wall (7.2) | Makes the "multi-year" claim credible — do before the flagship deep-dive | scan/export existing covers |
-| 12 | Industrial Vision flagship spreads (7.3) | Only needed once §7.1–7.2 are in and a flagship edition is picked | scan 3 pages from one issue |
+| 11 | ~~Industrial Vision cover wall (7.2)~~ | ✅ done — IV 2–10 covers wired | — |
+| 12 | ~~Industrial Vision flagship spreads (7.3)~~ | ✅ done — cover, spread & masthead wired | — |
 | 13 | Nepverse Concert Hall shot (8.6) | Last open Nepverse slot — CSS placeholder works fine until then | if you have a dedicated shot |
 
 ---
 
 ## File tree
 
+Images are organized into per-project subfolders under `public/images/`. Every `src` in code points at these exact paths.
+
 ```
 public/
-  Nabin_Ghimire_Resume_2026.pdf       ← 0.1 ✅ real, done
-  og-home.jpg                         ← 9.1, social sharing
-  favicon.svg / favicon.ico           ← 9.2
+  Nabin_Ghimire_Resume_2026.pdf              ← 0.1 ✅ real, done
+  og-home.jpg                                ← 9.1, social sharing (not in yet)
+  favicon.svg / favicon.ico                  ← 9.2 (not in yet)
   images/
-    nabin-headshot.jpg                ← 1.1, about page portrait
-    design-system.png                 ← 2.1 / 3.1 ✅ real, done
-    viveka-tokens-sheet.jpg           ← 3.2, optional upgrade — CSS token sample works fine as-is
-    thumb-claims.png                  ← 2.2 / 4.1 ✅ real, done
-    claims-workflow-diagram.jpg       ← 4.2, new slot — needs code wiring
-    thumb-docsink.png                 ← 2.3, placeholder in
-    docsink-surface-builder.webp      ← 5.1, placeholder in
-    docsink-surface-signing.jpg       ← 5.2, placeholder in
-    docsink-surface-dashboard.png     ← 5.3, placeholder in
-    docsink-surface-kiosk.jpg         ← 5.4
-    thumb-findcare.jpg                ← 2.4, optional
-    findcare-before.jpg               ← 6.1
-    findcare-after.jpg                ← 6.2
-  industrial-vision/
-    iv-hero.jpg                       ← 7.1, homepage card + case hero (dual-use)
-    covers/
-      iv-[edition].jpg                ← 7.2, one file per edition led, e.g. iv-2.jpg … iv-10.jpg
-    iv-10-cover.jpg                    ← 7.3
-    iv-10-spread.jpg                   ← 7.3
-    iv-10-masthead.jpg                 ← 7.3
-  Display screen.png                  ← 8.1 ✅ real, wired (hero + homepage card)
-  hall_showroom.png                    ← 8.2 ✅ real, wired (Exhibition Hall)
-  Outdoor planning.png                 ← 8.3 ✅ real, wired (Outdoor Scene)
-  Portal.png                           ← 8.4 ✅ real, wired (Portals feature visual)
-  Planning showroom-floorplan.png      ← 8.5 ✅ real, wired (Process step 01)
+    about/
+      nabin-headshot.jpg                     ← 1.1 ✅ real, done
+    viveka/
+      design-system.png                      ← 2.1 / 3.1 ✅ real, done
+      viveka-tokens-sheet.jpg                ← 3.2, optional upgrade — CSS token sample works fine as-is
+    claims/
+      thumb-claims.png                       ← 2.2 / 4.1 ✅ real, done
+      claims-workflow-diagram.jpg            ← 4.2, new slot — needs code wiring
+    docsink/
+      thumb-docsink.png                      ← 2.3, placeholder in
+      docsink-surface-builder.webp           ← 5.1, placeholder in
+      docsink-surface-signing.jpg            ← 5.2, placeholder in
+      docsink-surface-dashboard.png          ← 5.3, placeholder in
+      docsink-surface-kiosk.jpg              ← 5.4 (not in yet)
+    findcare/
+      findcare-hero.png                      ← 2.4 / 6.1 ✅ real, done (dual-use)
+      findcare-responsive.png                ← 6.2 ✅ real, done
+    industrial-vision/
+      industrial-vision-hero.png             ← 7.1, homepage card + case hero (dual-use)
+      iv-10-cover.jpg                        ← 7.3 ✅ real, wired
+      iv-10-spread.jpg                       ← 7.3 ✅ real, wired
+      iv-10-masthead.jpg                     ← 7.3 ✅ real, wired
+      covers/
+        IV2.webp … IV10.webp                 ← 7.2 ✅ real, wired (one per edition, IV 2–10)
+    nepverse/
+      Display screen.png                     ← 8.1 ✅ real, wired (hero + homepage card)
+      hall_showroom.png                      ← 8.2 ✅ real, wired (Exhibition Hall)
+      Outdoor planning.png                   ← 8.3 ✅ real, wired (Outdoor Scene)
+      Portal.png                             ← 8.4 ✅ real, wired (Portals feature visual)
+      Planning showroom-floorplan.png        ← 8.5 ✅ real, wired (Process step 01)
 ```
 
 **Items marked "new slot, not yet in code"** (3.2, 4.2, and 2.4 if you go with a real image) need a small JSX/CSS change before you can just drop the file in. Ping me when the image is ready and I'll wire it in at the same time.

@@ -44,7 +44,7 @@ export default function ClaimsPage() {
           <div className="case-visual case-visual--image" role="img" aria-label="From paper checks to digital claims payments — healthcare workflow">
             <div className="case-visual-bg" />
             <Image
-              src="/images/thumb-claims.png"
+              src="/images/claims/thumb-claims.png"
               alt="From paper checks to digital claims payments"
               fill
               className="case-visual-img"

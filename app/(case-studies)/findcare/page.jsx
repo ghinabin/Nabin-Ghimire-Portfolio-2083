@@ -43,7 +43,7 @@ export default function FindCarePage() {
 
           <div className="case-visual case-visual--image">
             <Image
-              src="/images/findcare-hero.png"
+              src="/images/findcare/findcare-hero.png"
               alt="The redesigned Find Care portal shown on desktop and mobile — category-first navigation, provider search, and in-network cost estimates"
               width={831}
               height={506}
@@ -248,7 +248,7 @@ export default function FindCarePage() {
         <div className="container">
           <div className="case-visual case-visual--image responsive-visual">
             <Image
-              src="/images/findcare-responsive.png"
+              src="/images/findcare/findcare-responsive.png"
               alt="The Find Care portal on mobile — the home screen, category selection, and provider search results shown across three phone screens"
               width={590}
               height={371}

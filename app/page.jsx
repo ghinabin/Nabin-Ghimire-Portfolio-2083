@@ -60,7 +60,7 @@ export default function HomePage() {
               <div className="work-thumb">
                 <div className="work-thumb-visual visual-viveka">
                   <Image
-                    src="/images/design-system.png"
+                    src="/images/viveka/design-system.png"
                     alt="Viveka Design System component library"
                     fill
                     className="work-thumb-img"
@@ -92,7 +92,7 @@ export default function HomePage() {
               <div className="work-thumb">
                 <div className="work-thumb-visual visual-docsink">
                   <Image
-                    src="/images/thumb-docsink.png"
+                    src="/images/docsink/thumb-docsink.png"
                     alt="DOCS.ink digital waiver platform on laptop"
                     fill
                     className="work-thumb-img"
@@ -124,7 +124,7 @@ export default function HomePage() {
               <div className="work-thumb">
                 <div className="work-thumb-visual visual-claims">
                   <Image
-                    src="/images/thumb-claims.png"
+                    src="/images/claims/thumb-claims.png"
                     alt="From paper checks to digital claims payments — healthcare workflow"
                     fill
                     className="work-thumb-img"
@@ -155,7 +155,7 @@ export default function HomePage() {
               <div className="work-thumb">
                 <div className="work-thumb-visual visual-findcare">
                   <Image
-                    src="/images/findcare-hero.png"
+                    src="/images/findcare/findcare-hero.png"
                     alt="Find Care portal on desktop and mobile — category-first provider search"
                     width={831}
                     height={506}
@@ -198,7 +198,7 @@ export default function HomePage() {
               <Link href="/industrial-vision" className="other-work-card">
                 <div className="other-work-visual">
                   <Image
-                    src="/images/industrial-vision-hero.png"
+                    src="/images/industrial-vision/industrial-vision-hero.png"
                     alt="Industrial Vision — printed engineering magazine covers"
                     fill
                     className="other-work-img"
@@ -229,7 +229,7 @@ export default function HomePage() {
               <Link href="/nepverse" className="other-work-card">
                 <div className="other-work-visual">
                   <Image
-                    src="/images/Display screen.png"
+                    src="/images/nepverse/Display screen.png"
                     alt="A user standing before a large interactive display screen inside the Nepverse virtual exhibition hall"
                     fill
                     className="other-work-img"
