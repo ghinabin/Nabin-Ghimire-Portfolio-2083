@@ -107,7 +107,7 @@ export default function HomePage() {
                 <span className="dot" />
                 <span>2024 — 2025</span>
               </div>
-              <h3 className="work-title">DOCS.ink Waivers</h3>
+              <h3 className="work-title">DOCS.ink — Digital Waiver Platform</h3>
               <p className="work-desc">
                 Led end-to-end design of the waiver builder and e-signature flow, shipped 2025.
               </p>
@@ -139,7 +139,7 @@ export default function HomePage() {
                 <span className="dot" />
                 <span>2024</span>
               </div>
-              <h3 className="work-title">Claims Payments</h3>
+              <h3 className="work-title">Healthcare Claims Payments</h3>
               <p className="work-desc">
                 Designed batch processing, status tracking, and audit trails, launched 2024.
               </p>
@@ -171,7 +171,7 @@ export default function HomePage() {
                 <span className="dot" />
                 <span>2023</span>
               </div>
-              <h3 className="work-title">Find Care</h3>
+              <h3 className="work-title">Find Care — Provider Search Portal</h3>
               <p className="work-desc">
                 Redesigned provider search and cost estimates for members, across web and mobile.
               </p>
@@ -211,7 +211,7 @@ export default function HomePage() {
                     <span className="dot" />
                     <span>2016 — Present</span>
                   </div>
-                  <h3 className="work-title">Industrial Vision</h3>
+                  <h3 className="work-title">Industrial Vision — Magazine Design</h3>
                   <p className="work-desc">
                     Design lead and art director for a print engineering magazine since 2016.
                   </p>
@@ -242,7 +242,7 @@ export default function HomePage() {
                     <span className="dot" />
                     <span>2021 — 2022</span>
                   </div>
-                  <h3 className="work-title">Nepverse</h3>
+                  <h3 className="work-title">Nepverse — VR Exhibition Platform</h3>
                   <p className="work-desc">
                     Product designer and 3D artist on a multiplayer VR exhibition prototype.
                   </p>
