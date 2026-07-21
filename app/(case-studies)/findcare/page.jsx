@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import '@/assets/css/pages/findcare.css'
 
 export const metadata = {
@@ -40,27 +41,16 @@ export default function FindCarePage() {
             for the uncertain, mobile-first throughout.
           </p>
 
-          <div className="case-visual" role="img" aria-label="Two phone mockups: the before state showing a broken keyword search, and the after state showing category-based navigation">
-            <div className="case-visual-bg" />
-            <div className="findcare-hero" aria-hidden="true">
-              <div className="findcare-phone before">
-                <div className="search-bar"><div className="query" /></div>
-                <div className="result"><div className="lines"><span /><span /></div></div>
-                <div className="error-row">No results found</div>
-                <div className="error-row">Try different keywords</div>
-                <div className="result"><div className="lines"><span /><span /></div></div>
-              </div>
-              <div className="findcare-phone after">
-                <div className="search-bar"><div className="query" /></div>
-                <div className="cat-grid">
-                  <div className="cat-tile highlight" />
-                  <div className="cat-tile" />
-                  <div className="cat-tile" />
-                  <div className="cat-tile" />
-                </div>
-                <div className="result"><div className="lines"><span /><span /></div></div>
-              </div>
-            </div>
+          <div className="case-visual case-visual--image">
+            <Image
+              src="/images/findcare-hero.png"
+              alt="The redesigned Find Care portal shown on desktop and mobile — category-first navigation, provider search, and in-network cost estimates"
+              width={831}
+              height={506}
+              className="case-visual-img"
+              sizes="(max-width: 768px) 100vw, 1120px"
+              priority
+            />
           </div>
 
           <div className="meta-strip">
@@ -237,6 +227,34 @@ export default function FindCarePage() {
               <h3>Mobile-first, not mobile-also.</h3>
               <p>More than 70% of members were already using the portal on mobile. The existing design was desktop-first, shoehorned down. The redesign started from the phone — touch targets sized for thumbs, bottom navigation for one-handed use, collapsible filters that don&apos;t block content.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RESPONSIVE */}
+      <section className="section">
+        <div className="container-narrow">
+          <p className="section-eyebrow">Responsive design</p>
+          <h2 className="section-title">Rebuilt mobile-first, for how members actually use it.</h2>
+          <div className="prose">
+            <p>
+              The original Daylight platform wasn&apos;t optimized for mobile devices — creating
+              significant usability issues for members accessing healthcare information on the go.
+              The team prioritized mobile-first design principles, and I redesigned the entire
+              mobile experience to ensure seamless functionality across all device sizes.
+            </p>
+          </div>
+        </div>
+        <div className="container">
+          <div className="case-visual case-visual--image responsive-visual">
+            <Image
+              src="/images/findcare-responsive.png"
+              alt="The Find Care portal on mobile — the home screen, category selection, and provider search results shown across three phone screens"
+              width={590}
+              height={371}
+              className="case-visual-img"
+              sizes="(max-width: 768px) 100vw, 1120px"
+            />
           </div>
         </div>
       </section>

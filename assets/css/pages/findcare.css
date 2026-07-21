@@ -2,130 +2,30 @@
    PAGE — Find Care case study
    ===================================================== */
 
-/* ── Hero visual: before/after phones ── */
-.case-visual-bg {
+/* ── Hero: transparent device-mockup PNG, contained on a themed panel
+   with breathing room so the screenshot is never cropped ── */
+.case-visual--image {
+  padding: clamp(1.5rem, 5vw, 4rem);
   background:
     radial-gradient(ellipse at 70% 50%, var(--accent-muted) 0%, transparent 55%),
     linear-gradient(160deg, var(--bg-muted) 0%, var(--bg-elevated) 100%);
 }
-
-.findcare-hero {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  gap: clamp(1rem, 4vw, 3rem);
-  align-items: center;
-  width: 85%;
+.case-visual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgba(0, 23, 27, 0.18));
+  transition: transform 0.8s var(--ease);
+}
+.case-visual--image:hover .case-visual-img {
+  transform: scale(1.02);
 }
 
-.findcare-phone {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: clamp(10px, 2vw, 16px);
-  box-shadow: var(--shadow-xl);
-  flex: 1;
-  max-width: 240px;
-  aspect-ratio: 9 / 16;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.findcare-phone.before {
-  opacity: 0.7;
-  transform: rotate(-3deg);
-}
-.findcare-phone.after {
-  transform: rotate(3deg);
-}
-
-.findcare-phone .search-bar {
-  padding: 8px 10px;
-  background: var(--bg-muted);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.findcare-phone .search-bar::before {
-  content: "";
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  border: 1.5px solid var(--text-tertiary);
-  flex-shrink: 0;
-}
-.findcare-phone .search-bar .query {
-  flex: 1;
-  height: 6px;
-  background: var(--border);
-  border-radius: 3px;
-}
-
-.findcare-phone .result {
-  padding: 8px;
-  background: var(--bg-muted);
-  border-radius: 6px;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-.findcare-phone .result::before {
-  content: "";
-  width: 18px; height: 18px;
-  background: var(--border);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.findcare-phone .result .lines {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.findcare-phone .result .lines span {
-  height: 4px;
-  background: var(--border);
-  border-radius: 2px;
-}
-.findcare-phone .result .lines span:first-child { width: 60%; }
-.findcare-phone .result .lines span:last-child  { width: 40%; }
-
-.findcare-phone.before .error-row {
-  padding: 8px;
-  background: var(--bg-muted);
-  border-radius: 6px;
-  opacity: 0.4;
-  font-size: 9px;
-  color: var(--text-tertiary);
-}
-
-.findcare-phone .cat-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px;
-}
-.findcare-phone .cat-tile {
-  background: var(--bg-muted);
-  border-radius: 6px;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: flex-end;
-  padding: 6px;
-}
-.findcare-phone .cat-tile::after {
-  content: "";
-  width: 60%; height: 4px;
-  background: var(--text-secondary);
-  opacity: 0.4;
-  border-radius: 2px;
-}
-.findcare-phone .cat-tile.highlight {
-  background: var(--accent-muted);
-}
-.findcare-phone .cat-tile.highlight::after {
-  background: var(--accent);
-  opacity: 1;
+/* Responsive-design section: reuses the contained-image panel, just spaced
+   below its intro copy. */
+.responsive-visual {
+  margin-top: 2.5rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
 }
 
 /* ── Big insight centerpiece ── */

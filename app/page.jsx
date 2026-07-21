@@ -75,10 +75,9 @@ export default function HomePage() {
                 <span className="dot" />
                 <span>2023 — Present</span>
               </div>
-              <h3 className="work-title">Building an enterprise design system from legacy chaos.</h3>
+              <h3 className="work-title">Viveka Design System</h3>
               <p className="work-desc">
-                Architecting the component library, tokens, and documentation powering Viveka&apos;s
-                healthcare platform — with accessibility and developer handoff built in from day one.
+                Led the component library, tokens, and docs powering Viveka&apos;s healthcare platform.
               </p>
               <span className="work-cta">
                 Read case study
@@ -108,10 +107,9 @@ export default function HomePage() {
                 <span className="dot" />
                 <span>2024 — 2025</span>
               </div>
-              <h3 className="work-title">A digital waiver platform, zero to scale.</h3>
+              <h3 className="work-title">DOCS.ink Waivers</h3>
               <p className="work-desc">
-                Led end-to-end design for DOCS.ink — waiver builder, multi-channel distribution,
-                e-signatures — shipped and now used by businesses across the US.
+                Led end-to-end design of the waiver builder and e-signature flow, shipped 2025.
               </p>
               <span className="work-cta">
                 Read case study
@@ -141,10 +139,9 @@ export default function HomePage() {
                 <span className="dot" />
                 <span>2024</span>
               </div>
-              <h3 className="work-title">From paper checks to digital claims payments.</h3>
+              <h3 className="work-title">Claims Payments</h3>
               <p className="work-desc">
-                Designed batch processing, real-time status tracking, and audit trails for a
-                healthcare claims reconciliation system integrated with Zelis.
+                Designed batch processing, status tracking, and audit trails, launched 2024.
               </p>
               <span className="work-cta">
                 Read case study
@@ -157,21 +154,14 @@ export default function HomePage() {
             <Link href="/findcare" className="work-card">
               <div className="work-thumb">
                 <div className="work-thumb-visual visual-findcare">
-                  <div className="visual-findcare-content" aria-hidden="true">
-                    <div className="visual-findcare-search"><span /></div>
-                    <div className="visual-findcare-row">
-                      <div className="avatar" />
-                      <div className="lines"><span /><span /></div>
-                    </div>
-                    <div className="visual-findcare-row">
-                      <div className="avatar" />
-                      <div className="lines"><span /><span /></div>
-                    </div>
-                    <div className="visual-findcare-row">
-                      <div className="avatar" />
-                      <div className="lines"><span /><span /></div>
-                    </div>
-                  </div>
+                  <Image
+                    src="/images/findcare-hero.png"
+                    alt="Find Care portal on desktop and mobile — category-first provider search"
+                    width={831}
+                    height={506}
+                    className="work-thumb-img work-thumb-img--contain"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
               <div className="work-tag-row">
@@ -181,10 +171,9 @@ export default function HomePage() {
                 <span className="dot" />
                 <span>2023</span>
               </div>
-              <h3 className="work-title">Making healthcare search actually work.</h3>
+              <h3 className="work-title">Find Care</h3>
               <p className="work-desc">
-                Redesigned provider search, smart filters, and price estimation for members who
-                don&apos;t speak in CPT codes — they speak in &ldquo;my knee hurts.&rdquo;
+                Redesigned provider search and cost estimates for members, across web and mobile.
               </p>
               <span className="work-cta">
                 Find Care case study
@@ -222,11 +211,9 @@ export default function HomePage() {
                     <span className="dot" />
                     <span>2016 — Present</span>
                   </div>
-                  <h3 className="work-title">Building the visual identity behind Innovation, Industry, Prosperity.</h3>
+                  <h3 className="work-title">Industrial Vision</h3>
                   <p className="work-desc">
-                    Design Lead &amp; Art Director for Industrial Vision, a print magazine featuring
-                    original engineering research and funded by industry advertising. Shaped its
-                    visual identity since IV 2 — from cover concept to print production.
+                    Design lead and art director for a print engineering magazine since 2016.
                   </p>
                   <span className="work-cta">
                     Read case study
@@ -255,11 +242,9 @@ export default function HomePage() {
                     <span className="dot" />
                     <span>2021 — 2022</span>
                   </div>
-                  <h3 className="work-title">Prototyping a metaverse businesses could actually rent space in.</h3>
+                  <h3 className="work-title">Nepverse</h3>
                   <p className="work-desc">
-                    Product designer &amp; 3D artist on a 5-person R&amp;D team at EKbana — took a
-                    COVID-era idea from sketch to a working multiplayer VR prototype in Unity, with
-                    exhibition halls and a 1,000-person concert venue.
+                    Product designer and 3D artist on a multiplayer VR exhibition prototype.
                   </p>
                   <span className="work-cta">
                     Read case study

@@ -120,32 +120,59 @@ export default function ClaimsPage() {
         </div>
       </section>
 
-      {/* THE PROBLEM */}
+      {/* RESEARCH */}
       <section className="section">
         <div className="container-narrow">
-          <p className="section-eyebrow">The problem</p>
-          <h2 className="section-title">Four ways the existing workflow was costing the business.</h2>
+          <p className="section-eyebrow">Research</p>
+          <h2 className="section-title">Before a payment could be redesigned, it had to be re-drawn.</h2>
           <div className="prose">
-            <p>The existing payment process had been built incrementally over years. Each piece worked in isolation. Together, they produced real operational drag:</p>
+            <p>I spent the first weeks mapping what the workflow <strong>actually</strong> looked like — not what the docs said, but what claims managers and finance staff were really doing day to day. Then I re-drew it, step by step, and used that map as the contract for every design decision after.</p>
+            {/* TODO(nabin): Confirm methods — interviews with claims managers + finance, screen-sharing sessions, paper process mapping. */}
+            <p>That mapping surfaced four failure modes the org had been absorbing as &ldquo;just how it works&rdquo;:</p>
             <ul>
               <li><strong>Paper processing.</strong> Claims managers generated checks manually, one at a time. No batch processing, no scheduling.</li>
               <li><strong>Zero visibility.</strong> Once a payment left the system, it was a black hole. Settlement failures showed up days or weeks later — sometimes from a provider calling to ask where their money was.</li>
               <li><strong>Compliance risk.</strong> Limited audit trails for approvals, no configurable controls for payment thresholds, and no clear way to track combined or reversed payments.</li>
               <li><strong>Operational cost.</strong> Finance teams spent hours per week on manual reconciliation. Duplicate payments and errors sometimes went undetected. Provider relationships strained.</li>
             </ul>
-            <p>The organization needed to digitize the workflow <strong>and</strong> integrate with a payment partner (Zelis) for ACH transfers and automated check processing. Both, at once.</p>
+            <p>The brief was to digitize the workflow <strong>and</strong> integrate with a payment partner (Zelis) for ACH transfers and automated check processing. Both, at once.</p>
           </div>
         </div>
       </section>
 
-      {/* BEFORE / AFTER */}
+      {/* SERVICE BLUEPRINT */}
       <section className="section">
         <div className="container-narrow">
           <p className="section-eyebrow">The workflow</p>
-          <h2 className="section-title">Before a payment could be redesigned, it had to be re-drawn.</h2>
-          <div className="prose">
-            <p>I spent the first weeks mapping what the workflow <strong>actually</strong> looked like — not what the docs said, but what claims managers and finance staff were really doing. Paper mapping, interviews, screen-sharing sessions. Then I drew what it should look like, step by step, and used that as the contract for every design decision after.</p>
+          <h2 className="section-title">Re-drawing the pipeline, before and after.</h2>
+
+          <div
+            className="workflow-diagram"
+            role="img"
+            aria-label="Before and after pipeline diagram: paper, mail, and manual match becomes batch, Zelis, and auto-reconcile"
+          >
+            <div className="workflow-diagram-row workflow-diagram-row--before" aria-hidden="true">
+              <span className="workflow-diagram-tag">Before</span>
+              <div className="workflow-diagram-steps">
+                <span className="workflow-diagram-step">Paper</span>
+                <span className="workflow-diagram-arrow" />
+                <span className="workflow-diagram-step">Mail</span>
+                <span className="workflow-diagram-arrow" />
+                <span className="workflow-diagram-step">Manual match</span>
+              </div>
+            </div>
+            <div className="workflow-diagram-row workflow-diagram-row--after" aria-hidden="true">
+              <span className="workflow-diagram-tag">After</span>
+              <div className="workflow-diagram-steps">
+                <span className="workflow-diagram-step">Batch</span>
+                <span className="workflow-diagram-arrow" />
+                <span className="workflow-diagram-step">Zelis</span>
+                <span className="workflow-diagram-arrow" />
+                <span className="workflow-diagram-step">Auto-reconcile</span>
+              </div>
+            </div>
           </div>
+          <span className="workflow-diagram-caption">Before/after pipeline — paper-and-mail vs. batch-and-Zelis.</span>
 
           <div className="workflow-compare">
             <div className="workflow-panel before">
@@ -188,6 +215,22 @@ export default function ClaimsPage() {
                 <h3>Make status the spine of the interface.</h3>
                 <p>In a paper workflow, status is a feeling — &ldquo;I think that went out last week.&rdquo; In a digital workflow, status should be a fact. I made <strong>payment status the primary organizing element</strong> of every screen.</p>
                 <p>Every payment carries its current state visibly — <em>Pending approval · Approved · Dispatched · Settled · Reconciled · Failed</em> — with timestamps and the last actor. Users never have to guess where a payment is in the pipeline. Auditors never have to reconstruct a sequence.</p>
+                <div className="decision-visual" aria-hidden="true">
+                  <div className="status-flow">
+                    <span className="status-flow-step">Pending approval</span>
+                    <span className="status-flow-arrow" />
+                    <span className="status-flow-step">Approved</span>
+                    <span className="status-flow-arrow" />
+                    <span className="status-flow-step">Dispatched</span>
+                    <span className="status-flow-arrow" />
+                    <span className="status-flow-step">Settled</span>
+                    <span className="status-flow-arrow" />
+                    <span className="status-flow-step">Reconciled</span>
+                    <span className="status-flow-arrow" />
+                    <span className="status-flow-step status-flow-step--fail">Failed</span>
+                  </div>
+                </div>
+                <span className="decision-visual-caption">Status-state lifecycle — every payment carries one of these states at all times.</span>
               </div>
             </div>
             <div className="decision">
@@ -196,6 +239,22 @@ export default function ClaimsPage() {
                 <h3>Batch first, exceptions second.</h3>
                 <p>Most payments are routine. A small percentage are exceptions — combined payments, reversals, flagged compliance items, provider preference changes. The old workflow treated every payment as a one-off, which meant routine payments drowned in the same friction as exceptions.</p>
                 <p>The new design prioritizes <strong>batch processing as the default path</strong>, with exception handling as a dedicated, deliberate flow. Most of a manager&apos;s day is now fast. The minority of payments that genuinely need attention get it — with the right controls and audit trail.</p>
+                <div className="decision-visual" aria-hidden="true">
+                  <div className="batch-exception-mock">
+                    <div className="batch-exception-col">
+                      <span className="batch-exception-col-label">Batch — default path</span>
+                      <div className="batch-exception-bar" style={{ width: '92%' }} />
+                      <div className="batch-exception-bar" style={{ width: '78%' }} />
+                      <div className="batch-exception-bar" style={{ width: '85%' }} />
+                    </div>
+                    <div className="batch-exception-col batch-exception-col--exception">
+                      <span className="batch-exception-col-label">Exception — deliberate flow</span>
+                      <div className="batch-exception-bar" style={{ width: '60%' }} />
+                      <div className="batch-exception-bar" style={{ width: '45%' }} />
+                    </div>
+                  </div>
+                </div>
+                <span className="decision-visual-caption">Batch processing, the fast default path, next to the dedicated exception-handling flow.</span>
               </div>
             </div>
             <div className="decision">
@@ -204,6 +263,23 @@ export default function ClaimsPage() {
                 <h3>Audit trail by construction, not by report.</h3>
                 <p>The easiest way to ship an audit trail is to build a report generator. That works for auditors, but it doesn&apos;t help the operator. Worse, it means audit data lives in a separate place from the workflow — <strong>truth split across two systems</strong>.</p>
                 <p>I pushed for audit trails that are part of the workflow itself: every action logged in context, every decision attributed, every override explained. When an auditor asks <em>&ldquo;who approved this, when, and why?&rdquo;</em>, the answer lives on the same screen as the payment.</p>
+                <div className="decision-visual" aria-hidden="true">
+                  <div className="audit-trail-mock">
+                    <div className="audit-trail-row">
+                      <span className="audit-trail-time">09:14</span>
+                      <span className="audit-trail-detail">Payment approved — threshold sign-off logged</span>
+                    </div>
+                    <div className="audit-trail-row">
+                      <span className="audit-trail-time">09:16</span>
+                      <span className="audit-trail-detail">Dispatched via Zelis — ACH</span>
+                    </div>
+                    <div className="audit-trail-row">
+                      <span className="audit-trail-time">11:02</span>
+                      <span className="audit-trail-detail">Override — amount adjusted, reason logged</span>
+                    </div>
+                  </div>
+                </div>
+                <span className="decision-visual-caption">Audit trail in context — approval chain and override reasons live on the payment itself.</span>
               </div>
             </div>
           </div>
@@ -253,6 +329,7 @@ export default function ClaimsPage() {
               <p>Reconciliation that used to catch problems weeks later now surfaces exceptions within hours. Duplicate and failed payments are investigated before they turn into provider complaints.</p>
             </div>
           </div>
+          {/* TODO(nabin): If you can defend any figure — reconciliation time, manual-hours reduced, exception-catch speed — even directional, add one here. This study's outcomes are strong but entirely qualitative; one number lands hard in an enterprise context. */}
         </div>
       </section>
 
@@ -264,6 +341,7 @@ export default function ClaimsPage() {
           <div className="prose">
             <p>The biggest lesson from this project: in regulated workflows, <strong>the user isn&apos;t just the operator — it&apos;s also the auditor, the regulator, and the provider on the other end of the payment.</strong> Every screen has to serve all of them at once.</p>
             <p>That changes the design brief. You can&apos;t just optimize for operator speed; you also need a trace someone else can read, months later, to reconstruct what happened and why. In the best case, those two goals reinforce each other — the operator does the right thing by default, and the right thing happens to be auditable. That&apos;s what this module tries to do.</p>
+            <p>Batch reconciliation, status tracking, and audit-by-construction are the same operational patterns behind order and inventory management in any enterprise system — the domain changes, the design problem doesn&apos;t.</p>
           </div>
         </div>
       </section>

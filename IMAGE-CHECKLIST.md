@@ -45,9 +45,9 @@ Real image, already wired in on the homepage card and the claims case-study hero
 **Used by:** [page.jsx](app/page.jsx) homepage work-grid card
 Generic laptop device shot standing in. Swap for a real DOCS.ink product screenshot on a laptop mockup if you have one you can anonymize.
 
-### [ ] 2.4 — Find Care thumb
-**Used by:** [page.jsx](app/page.jsx) — currently a hand-built CSS illustration (`visual-findcare-content`), not an image file. Works fine as-is; only replace if you get a clean provider-search screenshot you're confident sharing.
-- If you do: **Aspect ratio:** 16:10, save as `public/images/thumb-findcare.jpg` and it'll need the same `<Image fill>` wiring the other three cards use.
+### [x] 2.4 — Find Care thumb `public/images/findcare-hero.png`
+**Used by:** [page.jsx](app/page.jsx) homepage work-grid card. Real Daylight/Find Care product shot (desktop + mobile), wired in with `<Image fill>` the same way the other three cards are. Same file is dual-used as the case-study hero (§6). Done.
+**⚠ NDA note:** this screenshot is fully branded (shows "Daylight", "Viveka Health", and sample patient/provider names) — which sits in tension with the NDA notice on the case-study page that says the client org is generalized and screens are abstract. Decide whether to keep as-is, anonymize the screenshot, or soften that NDA line.
 
 ---
 
@@ -70,10 +70,22 @@ Real Figma export, already wired. Done.
 ### [x] 4.1 — Hero `public/images/thumb-claims.png`
 Real, already wired. Done.
 
-### [ ] 4.2 — Workflow diagram (new slot, not yet in code)
-**Would go in:** the "Before / After" section, [claims/page.jsx:150](app/(case-studies)/claims/page.jsx#L150) — currently two plain numbered lists (`workflow-panel before` / `after`).
-**What it should show:** a simple visual flow diagram of the before (paper → mail → manual match) vs. after (batch → Zelis → auto-reconcile) pipeline. This is the case study most explicitly about a *workflow redesign*, so a diagram here does more work than anywhere else on the site — text lists undersell it.
-**Format:** could be a Figma export, or a clean diagram image — doesn't need to be a screenshot of real product UI, an abstract flow diagram is appropriate given the NDA notice already on the page.
+### [~] 4.2 — Workflow diagram `public/images/claims-workflow-diagram.jpg`
+**Wired at:** the "Service blueprint" section, [claims/page.jsx](app/(case-studies)/claims/page.jsx) — currently a CSS-only diagram (`.workflow-diagram` / `.workflow-diagram-row` / `.workflow-diagram-step`, styles in [claims.css](assets/css/pages/claims.css)) showing the before (paper → mail → manual match) vs. after (batch → Zelis → auto-reconcile) pipeline as connected pill labels.
+**What it should show:** a simple visual flow diagram of the same before/after pipeline. This is the case study most explicitly about a *workflow redesign*, so a diagram here does more work than anywhere else on the site — the CSS pill version is a placeholder, not the final craft evidence.
+**Format:** could be a Figma export, or a clean diagram image — doesn't need to be a screenshot of real product UI, an abstract flow diagram is appropriate given the NDA notice already on the page. Swap the `.workflow-diagram` block for an `<Image fill>` when ready — ping me and I'll wire it in.
+
+### [~] 4.3 — Status-state diagram (new slot)
+**Wired at:** Decision 01 "Make status the spine of the interface," [claims/page.jsx](app/(case-studies)/claims/page.jsx) — currently a CSS-only pill sequence (`.status-flow` / `.status-flow-step`, styles in [claims.css](assets/css/pages/claims.css)) showing the six-state lifecycle (Pending approval → … → Reconciled/Failed).
+**What it should show:** the same six-state lifecycle, ideally as a real product screenshot or diagram of the status badge/timeline UI. No image file needed to ship — the CSS version works as a placeholder.
+
+### [~] 4.4 — Batch vs. exception UI (new slot)
+**Wired at:** Decision 02 "Batch first, exceptions second," [claims/page.jsx](app/(case-studies)/claims/page.jsx) — currently a CSS-only two-column mock (`.batch-exception-mock`, styles in [claims.css](assets/css/pages/claims.css)) suggesting a fast batch list next to a deliberate exception flow.
+**What it should show:** a real (anonymized) screenshot contrasting the batch queue view with the exception-handling flow.
+
+### [~] 4.5 — Audit trail in context (new slot)
+**Wired at:** Decision 03 "Audit trail by construction, not by report," [claims/page.jsx](app/(case-studies)/claims/page.jsx) — currently a CSS-only mock log (`.audit-trail-mock`, styles in [claims.css](assets/css/pages/claims.css)) with dummy timestamped rows.
+**What it should show:** a real (anonymized) screenshot of a payment detail view with the inline approval chain and override reasons — proves "by construction" rather than "by report."
 
 ---
 
@@ -103,17 +115,15 @@ These already have code slots wired and stock/placeholder images in. Swap for re
 
 ---
 
-## 6. Find Care Case Study — phone mockups
+## 6. Find Care Case Study — hero
 
-The CSS phone outlines work as a placeholder. Upgrade only if you have real Figma exports.
+### [x] 6.1 — Hero `public/images/findcare-hero.png`
+**Wired at:** [findcare/page.jsx](app/(case-studies)/findcare/page.jsx) `.case-visual--image` — real Daylight/Find Care product shot (desktop + mobile), replacing the old before/after CSS phone mockup. Contained (not cropped) on a themed panel with padding + drop-shadow, since the PNG is transparent. **Dual-use:** same file backs the homepage card thumbnail (§2.4). Done.
+**⚠ NDA note:** see §2.4 — branded screenshot vs. the "abstract representations" NDA notice on the page. Your call on how to reconcile.
 
-### [ ] 6.1 — Before state `public/images/findcare-before.jpg`
-- **Aspect ratio:** 9:16 · **Size:** 450×800px
-- **Shows:** the confusing/sparse "before" search results screen
-
-### [ ] 6.2 — After state `public/images/findcare-after.jpg`
-- **Aspect ratio:** 9:16 · **Size:** 450×800px
-- **Shows:** the clean category-grid "after" redesign
+### [x] 6.2 — Responsive/mobile `public/images/findcare-responsive.png`
+**Wired at:** the new "Responsive design" section, [findcare/page.jsx](app/(case-studies)/findcare/page.jsx) `.responsive-visual` — three-screen mobile mockup of the Daylight portal, contained on the same themed panel as the hero. Done.
+**⚠ NDA note:** same branded-screenshot caveat as §2.4/6.1.
 
 ---
 

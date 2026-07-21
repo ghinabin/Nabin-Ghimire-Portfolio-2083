@@ -285,64 +285,19 @@
 [data-theme="dark"] .visual-findcare {
   background: linear-gradient(160deg, #0B404A 0%, #003540 100%);
 }
-.visual-findcare-content {
-  width: 70%; max-width: 320px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 16px;
-  box-shadow: var(--shadow-lg);
+/* Find Care uses a transparent device-mockup PNG — contain it with padding
+   so it's never cropped, instead of the cover crop the other cards use. */
+.visual-findcare { padding: clamp(1rem, 5%, 2rem); }
+.work-thumb-img--contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: none;
+  filter: drop-shadow(0 10px 22px rgba(0, 23, 27, 0.16));
 }
-.visual-findcare-search {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
-  background: var(--bg-muted);
-  border-radius: var(--radius-md);
-  margin-bottom: 12px;
-}
-.visual-findcare-search::before {
-  content: "";
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  border: 1.5px solid var(--text-tertiary);
-  flex-shrink: 0;
-}
-.visual-findcare-search span {
-  flex: 1; height: 8px;
-  background: var(--border);
-  border-radius: 4px;
-}
-.visual-findcare-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  border-top: 1px solid var(--border-subtle);
-}
-.visual-findcare-row .avatar {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: var(--accent-muted);
-  flex-shrink: 0;
-}
-.visual-findcare-row .lines {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.visual-findcare-row .lines span:first-child {
-  width: 60%; height: 6px;
-  background: var(--text-secondary);
-  border-radius: 3px;
-  opacity: 0.5;
-}
-.visual-findcare-row .lines span:last-child {
-  width: 40%; height: 5px;
-  background: var(--border);
-  border-radius: 3px;
+.work-card:hover .work-thumb-img--contain {
+  transform: scale(1.02);
+  filter: drop-shadow(0 10px 22px rgba(0, 23, 27, 0.16));
 }
 
 /* ── Work card metadata ── */
